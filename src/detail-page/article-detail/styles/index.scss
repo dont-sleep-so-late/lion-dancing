@@ -1,0 +1,130 @@
+/* 导航栏背景动画 start */
+.navbar-bg-animation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(-120deg, #f15bb5, #9a5ce5, #01beff, #00f5d4);
+  background-size: 500% 500%;
+  animation: bgAnimation 15s ease infinite;
+  z-index: 9999;
+}
+/* 导航栏背景动画 end */
+
+/* 页面内容容器 start */
+.article-detail-page {
+  position: relative;
+  width: 100%;
+  padding-bottom: 160rpx;
+  /* 文章内容 start */
+  .article-content {
+    padding: 30rpx;
+    border-bottom: 20rpx solid var(--tn-color-gray-light);
+
+    .content {
+      margin-top: 30rpx;
+      height: 100vh;
+    }
+
+    .bottom-container {
+      margin-top: 50rpx;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--tn-color-gray);
+      font-size: 26rpx;
+      line-height: 1;
+
+      .view-data {
+        .view-count {
+          margin-left: 10rpx;
+        }
+      }
+      .count-data {
+        view + view {
+          margin-left: 12rpx;
+        }
+      }
+    }
+  }
+  /* 文章内容 end */
+
+  /* 推荐文章 start */
+  .recommend-article {
+    position: relative;
+    width: 100%;
+    padding: 50rpx 30rpx;
+
+    .recommend-title {
+      :deep(.title) {
+        font-size: 32rpx;
+      }
+      :deep(.operation) {
+        font-size: 26rpx;
+      }
+    }
+
+    .recommend-data {
+      margin-top: 40rpx;
+
+      .recommend-item {
+        & + .recommend-item {
+          margin-top: 30rpx;
+        }
+      }
+    }
+  }
+  /* 推荐文章 end */
+}
+/* 页面内容容器 end */
+
+/* 底部操作栏 start */
+.operation-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+
+  /* 资讯操作栏 start */
+  .news-bar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rpx 30rpx 30rpx 30rpx;
+
+    .btn-container {
+      width: calc(100% / 2 - 30rpx);
+      color: #fff;
+
+      .btn {
+        border-radius: 12rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80rpx;
+
+        .icon {
+          margin-left: 10rpx;
+        }
+      }
+    }
+  }
+  /* 资讯操作栏 end */
+}
+/* 底部操作栏 end */
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

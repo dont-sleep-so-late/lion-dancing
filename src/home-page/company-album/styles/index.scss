@@ -1,0 +1,68 @@
+/* 相册介绍 start */
+.album-introduction {
+  position: relative;
+  width: 100%;
+  height: 480rpx;
+  background: url('https://resource.tuniaokj.com/images/simple/image3.jpg')
+    no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+
+  .introduction-info {
+    position: absolute;
+    left: 0;
+    bottom: 160rpx;
+    color: #fff;
+    width: 100%;
+    padding: 0rpx 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+
+    .info-content {
+      .title {
+        font-size: 34rpx;
+      }
+      .desc {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 24rpx;
+        margin-top: 8rpx;
+      }
+    }
+
+    .tips-icon {
+      color: var(--tn-color-gray);
+    }
+  }
+}
+/* 相册介绍 end */
+
+/* 相册列表 start */
+.company-album {
+  position: relative;
+  top: -80rpx;
+  width: 100%;
+  border-radius: 30rpx 30rpx 0rpx 0rpx;
+  padding: 0rpx 30rpx 60rpx 0rpx;
+  z-index: 2;
+  background-color: #fff;
+
+  .album-item {
+    width: calc(100% - 30rpx);
+    margin: 30rpx;
+    border-radius: 12rpx;
+  }
+}
+/* 相册列表 end */

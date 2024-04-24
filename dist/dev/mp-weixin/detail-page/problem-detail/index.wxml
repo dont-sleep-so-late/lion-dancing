@@ -1,0 +1,1 @@
+<tn-navbar wx:if="{{a}}" class="data-v-d3f2e019" u-i="d3f2e019-0" bind:__l="__l" u-p="{{a}}"/><view class="problem-detail data-v-d3f2e019">{{b}}</view>

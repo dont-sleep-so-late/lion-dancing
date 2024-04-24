@@ -1,0 +1,46 @@
+/* 地图 start */
+.map.data-v-aa0de221 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.map map.data-v-aa0de221 {
+  width: 100%;
+  height: 100%;
+}
+/* 地图 end */
+/* 位置内容 start */
+.location-content.data-v-aa0de221 {
+  position: fixed;
+  left: 50%;
+  bottom: 200rpx;
+  width: calc(100vw - 60rpx);
+  transform: translate(-50%, 0);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-radius: 12rpx;
+}
+.location-content .content-info.data-v-aa0de221 {
+  flex: 1;
+}
+.location-content .content-info .name.data-v-aa0de221 {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.location-content .content-info .desc.data-v-aa0de221 {
+  font-size: 24rpx;
+  color: var(--tn-color-gray);
+  margin-top: 10rpx;
+}
+.location-content .content-icon.data-v-aa0de221 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 54rpx;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background-color: var(--tn-color-gray-disabled);
+}
+/* 位置内容 end */

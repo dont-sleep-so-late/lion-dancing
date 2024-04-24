@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [
+    {
+      "root": "home-page",
+      "pages": [
+        "search/index",
+        "brand-introduction/index",
+        "win-win/index",
+        "topic-community/index",
+        "tuniao-ecology/index",
+        "company-culture/index",
+        "development-path/index",
+        "company-album/index",
+        "honor-cert/index",
+        "company-location/index"
+      ]
+    },
+    {
+      "root": "detail-page",
+      "pages": [
+        "product-detail/index",
+        "business-process-detail/index",
+        "article-detail/index",
+        "problem-detail/index"
+      ]
+    },
+    {
+      "root": "tuniao",
+      "pages": [
+        "about/index"
+      ]
+    },
+    {
+      "root": "info-page",
+      "pages": [
+        "user-info/index",
+        "common-problem/index",
+        "member-rights/index"
+      ]
+    },
+    {
+      "root": "order-page",
+      "pages": [
+        "order-list/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "图鸟官网",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {
+    "tn-icon": "/node-modules/@tuniao/tnui-vue3-uniapp/components/icon/src/icon",
+    "tn-navbar": "/node-modules/@tuniao/tnui-vue3-uniapp/components/navbar/src/navbar",
+    "tn-button": "/node-modules/@tuniao/tnui-vue3-uniapp/components/button/src/button"
+  }
+}

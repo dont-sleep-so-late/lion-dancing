@@ -1,0 +1,76 @@
+.user-info {
+  position: relative;
+  width: 100%;
+  padding: 30rpx 0rpx;
+
+  .input {
+    padding: 0;
+    color: var(--tn-color-gray);
+  }
+
+  /* nickname、头像 start */
+  .avatar-nickname {
+    position: relative;
+    width: 100%;
+    padding: 30rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 20rpx solid var(--tn-color-gray-light);
+
+    .left {
+      flex: 1;
+      .nickname {
+        width: 100%;
+        font-size: 32rpx;
+        font-weight: bold;
+      }
+      .desc {
+        width: 100%;
+        margin-top: 10rpx;
+      }
+    }
+
+    .avatar {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 100rpx;
+      height: 100rpx;
+      border-radius: 50%;
+    }
+  }
+  /* nickname、头像 end */
+
+  /* 信息item start */
+  .info-item {
+    position: relative;
+    width: 100%;
+    padding: 30rpx;
+    display: flex;
+    align-items: center;
+
+    .left {
+      flex: 1;
+
+      .item-title {
+        width: 100%;
+        font-size: 32rpx;
+        font-weight: bold;
+      }
+
+      .content {
+        margin-top: 10rpx;
+        color: var(--tn-color-gray);
+      }
+    }
+    .right {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-left: 12rpx;
+    }
+
+    & + .info-item {
+      border-top: 1rpx solid var(--tn-color-gray-light);
+    }
+  }
+  /* 信息item end */
+}

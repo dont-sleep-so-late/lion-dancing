@@ -1,0 +1,93 @@
+/* 社区概述 start */
+.community-summary {
+  position: relative;
+  width: 100%;
+  height: 480rpx;
+  background: url('https://resource.tuniaokj.com/images/vue3-template/template2-website/aa8.jpg')
+    no-repeat;
+  background-size: 130%;
+  background-position: center center;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  .summary-content {
+    position: absolute;
+    left: 0;
+    bottom: 140rpx;
+    width: 100%;
+    padding: 0rpx 30rpx;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    .summary-info {
+      flex: 1;
+      color: #fff;
+
+      .title {
+        font-size: 44rpx;
+      }
+      .desc {
+        margin-top: 18rpx;
+      }
+    }
+
+    .summary-avatar {
+      position: relative;
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 120rpx;
+      height: 120rpx;
+      border-radius: 50%;
+      margin-left: 26rpx;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(20rpx);
+        -webkit-backdrop-filter: blur(20rpx);
+        transform: scale(1.1);
+        transform-origin: center center;
+      }
+    }
+  }
+}
+/* 社区概述 end */
+
+/* 话题列表 start */
+.topic-list {
+  position: relative;
+  top: -60rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  background-color: #fff;
+  padding: 50rpx 30rpx 20rpx 30rpx;
+  z-index: 10;
+
+  .topic-item {
+    & + .topic-item {
+      margin-top: 36rpx;
+    }
+  }
+}
+/* 话题列表 end */

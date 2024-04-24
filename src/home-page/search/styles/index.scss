@@ -1,0 +1,77 @@
+.search-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--tn-color-blue-light) 0px,
+    transparent 20%,
+    transparent 100%
+  );
+  padding: 30rpx;
+  padding-bottom: 60rpx;
+
+  /* 搜索操作栏 start */
+  .search-operation {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .input {
+      flex: 1;
+    }
+
+    .button {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-left: 50rpx;
+    }
+  }
+  /* 搜索操作栏 end */
+
+  /* 历史搜索 start */
+  .history-list {
+    position: relative;
+    width: 100%;
+    margin-top: 80rpx;
+
+    .content-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 40rpx;
+
+      .history-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+        font-size: 24rpx;
+        line-height: 1;
+        padding: 18rpx 30rpx;
+        border-radius: 10000rpx;
+        margin-right: 24rpx;
+        margin-bottom: 24rpx;
+      }
+    }
+  }
+  /* 历史搜索 end */
+
+  /* 搜索结果 start */
+  .search-result {
+    margin-top: 80rpx;
+
+    .content-wrapper {
+      margin-top: 50rpx;
+
+      .result-item {
+        position: relative;
+        width: 100%;
+
+        & + .result-item {
+          margin-top: 36rpx;
+        }
+      }
+    }
+  }
+  /* 搜索结果 end */
+}

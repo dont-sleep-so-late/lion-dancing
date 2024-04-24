@@ -1,0 +1,55 @@
+.tn-footer.data-v-f61473ab {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  /* 导航 start */
+  /* 导航 end */
+  /* 固定方式 start */
+  /* 固定方式 end */
+  /* 尺寸 start */
+  /* 尺寸 end */
+}
+.tn-footer__navigators.data-v-f61473ab {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10rpx;
+}
+.tn-footer__navigator.data-v-f61473ab {
+  position: relative;
+}
+.tn-footer__navigator + .tn-footer__navigator.data-v-f61473ab {
+  padding-left: 30rpx;
+}
+.tn-footer__navigator + .tn-footer__navigator.data-v-f61473ab::before {
+  content: "";
+  position: absolute;
+  left: 15rpx;
+  top: 50%;
+  width: 1rpx;
+  height: 60%;
+  background-color: var(--tn-color-gray-disabled);
+  transform: translate(0, -50%);
+}
+.tn-footer__fixed.data-v-f61473ab {
+  left: 0;
+  bottom: 0;
+}
+.tn-footer__fixed--container.data-v-f61473ab {
+  position: absolute;
+}
+.tn-footer__fixed--page.data-v-f61473ab {
+  position: fixed;
+}
+.tn-footer--sm.data-v-f61473ab {
+  font-size: 24rpx;
+}
+.tn-footer--lg.data-v-f61473ab {
+  font-size: 32rpx;
+}
+.tn-footer--xl.data-v-f61473ab {
+  font-size: 36rpx;
+}

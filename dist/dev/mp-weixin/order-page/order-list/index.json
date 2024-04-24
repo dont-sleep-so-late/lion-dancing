@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单列表",
+  "usingComponents": {
+    "tn-tabs": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs",
+    "tn-tabs-item": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs-item",
+    "tn-swiper": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper",
+    "order-item": "./components/order-item/index"
+  }
+}

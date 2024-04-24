@@ -1,0 +1,15 @@
+.page.data-v-83a5a03c {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+}
+.page__container.data-v-83a5a03c {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.page__container .scroll-view.data-v-83a5a03c {
+  width: 100%;
+  height: 100%;
+}

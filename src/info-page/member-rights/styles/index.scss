@@ -1,0 +1,192 @@
+@font-face {
+  font-family: 'tuniao-xiaowei';
+  src: url('https://resource.tuniaokj.com/images/vue3-template/template2-website/font/tuniao-xiaowei.ttf');
+}
+.page {
+  position: relative;
+  width: 100%;
+  padding: 40rpx 30rpx;
+
+  /* 会员权益 start */
+  .member-rights {
+    position: relative;
+    width: 100%;
+    padding: 30rpx 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(-120deg, #3e445a, #31374a, #2b3042, #262b3c);
+    margin-top: 60rpx;
+    border-radius: 20rpx;
+
+    &::before {
+      z-index: -1;
+    }
+
+    .member-content {
+      position: relative;
+      z-index: 3;
+      .grade {
+        font-family: 'tuniao-xiaowei';
+        font-size: 42rpx;
+        font-weight: bold;
+        background-image: linear-gradient(360deg, #ffe3a3, #feeacc);
+      }
+      .desc {
+        font-size: 24rpx;
+        margin-top: 12rpx;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    .price {
+      position: relative;
+      font-size: 32rpx;
+      z-index: 3;
+
+      .unit {
+        font-size: 24rpx;
+      }
+    }
+
+    /* 图片波浪 start */
+    .image-wave-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      border-radius: inherit;
+
+      .image-wave {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 100%;
+        background: url('https://resource.tuniaokj.com/images/wave/wave-2.png');
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        animation-name: waveAnimation;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        &:nth-child(1) {
+          opacity: 0.1;
+          background-size: 50% 45px;
+          animation-duration: 4s;
+        }
+        &:nth-child(2) {
+          opacity: 0.2;
+          background-size: 50% 50px;
+          animation-duration: 3.5s;
+        }
+        &:nth-child(3) {
+          opacity: 0.3;
+          background-size: 50% 35px;
+          animation-duration: 2s;
+        }
+      }
+    }
+    /* 图片波浪 end */
+  }
+  /* 会员权益 end */
+
+  /* 项目表格 start */
+  .project-table {
+    position: relative;
+    width: 100%;
+    border-radius: 12rpx;
+    margin-top: 50rpx;
+
+    .table-header {
+      position: relative;
+      width: 100%;
+      background-color: var(--tn-color-brown-light);
+      display: flex;
+      border-radius: 12rpx 12rpx 0rpx 0rpx;
+
+      .header-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30rpx 0rpx;
+
+        .title {
+          font-weight: bold;
+          font-size: 30rpx;
+        }
+        .desc {
+          font-size: 24rpx;
+          color: var(--tn-color-gray);
+          margin-top: 6rpx;
+        }
+      }
+    }
+
+    .table-tr {
+      position: relative;
+      width: 100%;
+      display: flex;
+
+      .tr-item {
+        flex: 1;
+        height: 100rpx;
+        padding: 14rpx;
+
+        .project-name,
+        .empty {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+        }
+
+        .text {
+          font-size: 26rpx;
+        }
+
+        & + .tr-item {
+          border-left: 1px solid var(--tn-color-gray-light);
+        }
+      }
+
+      &:last-of-type {
+        border-radius: 0rpx 0rpx 12rpx 12rpx;
+      }
+
+      & + .table-tr {
+        border-top: 1px solid var(--tn-color-gray-light);
+      }
+    }
+  }
+  /* 项目表格 end */
+}
+
+/* 咨询按钮 start */
+.contact-btn {
+  position: fixed;
+  left: 0;
+  bottom: 40rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/* 咨询按钮 end */
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

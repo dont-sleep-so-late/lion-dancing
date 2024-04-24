@@ -1,0 +1,148 @@
+{
+  "pages": [{
+    "path": "pages/index/index",
+    "style": {
+      "navigationBarTitleText": "狮业有成"
+    }
+  }],
+  "subPackages": [{
+      "root": "home-page",
+      "pages": [{
+          "path": "search/index",
+          "style": {
+            "navigationBarTitleText": "搜索"
+          }
+        },
+        {
+          "path": "brand-introduction/index",
+          "style": {
+            "navigationBarTitleText": "品牌介绍"
+          }
+        },
+        {
+          "path": "win-win/index",
+          "style": {
+            "navigationBarTitleText": "合作共赢"
+          }
+        },
+        {
+          "path": "topic-community/index",
+          "style": {
+            "navigationBarTitleText": "话题社区"
+          }
+        },
+        {
+          "path": "tuniao-ecology/index",
+          "style": {
+            "navigationBarTitleText": "图鸟生态"
+          }
+        },
+        {
+          "path": "company-culture/index",
+          "style": {
+            "navigationBarTitleText": "公司文化"
+          }
+        },
+        {
+          "path": "development-path/index",
+          "style": {
+            "navigationBarTitleText": "发展历程"
+          }
+        },
+        {
+          "path": "company-album/index",
+          "style": {
+            "navigationBarTitleText": "公司相册"
+          }
+        },
+        {
+          "path": "honor-cert/index",
+          "style": {
+            "navigationBarTitleText": "荣誉证书"
+          }
+        },
+        {
+          "path": "company-location/index",
+          "style": {
+            "navigationBarTitleText": "公司位置"
+          }
+        }
+      ]
+    },
+    {
+      "root": "detail-page",
+      "pages": [{
+          "path": "product-detail/index",
+          "style": {
+            "navigationBarTitleText": "产品详情"
+          }
+        },
+        {
+          "path": "business-process-detail/index",
+          "style": {
+            "navigationBarTitleText": "业务流程"
+          }
+        },
+        {
+          "path": "article-detail/index",
+          "style": {
+            "navigationBarTitleText": "文章详情"
+          }
+        },
+        {
+          "path": "problem-detail/index",
+          "style": {
+            "navigationBarTitleText": "问题详情"
+          }
+        }
+      ]
+    },
+    {
+      "root": "tuniao",
+      "pages": [{
+        "path": "about/index",
+        "style": {
+          "navigationBarTitleText": "关于图鸟"
+        }
+      }]
+    },
+    {
+      "root": "info-page",
+      "pages": [{
+          "path": "user-info/index",
+          "style": {
+            "navigationBarTitleText": "个人信息"
+          }
+        },
+        {
+          "path": "common-problem/index",
+          "style": {
+            "navigationBarTitleText": "常见问题"
+          }
+        },
+        {
+          "path": "member-rights/index",
+          "style": {
+            "navigationBarTitleText": "会员权益"
+          }
+        }
+      ]
+    },
+    {
+      "root": "order-page",
+      "pages": [{
+        "path": "order-list/index",
+        "style": {
+          "navigationBarTitleText": "订单列表"
+        }
+      }]
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "图鸟官网",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

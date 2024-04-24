@@ -1,0 +1,71 @@
+.honor-list {
+  position: relative;
+  width: 100%;
+  padding: 50rpx 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .honor-item {
+    position: relative;
+    width: calc(100% / 2 - 15rpx);
+    margin-bottom: 30rpx;
+    background-color: #fff;
+    border-radius: 8rpx;
+    padding: 12rpx;
+    padding-bottom: 20rpx;
+
+    .item-image {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+
+      .image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 8rpx;
+        clip-path: polygon(
+          42% 15%,
+          50% 0%,
+          100% 0%,
+          100% 100%,
+          0% 100%,
+          0% 18%
+        );
+      }
+    }
+
+    .item-title {
+      position: relative;
+      text-align: center;
+      font-size: 26rpx;
+      font-weight: bold;
+      margin-top: 16rpx;
+    }
+
+    .item-date {
+      position: absolute;
+      left: 14rpx;
+      top: 14rpx;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        font-size: 38rpx;
+      }
+      .value {
+        font-size: 24rpx;
+        margin-left: 6rpx;
+        line-height: 1;
+        height: fit-content;
+      }
+    }
+  }
+}

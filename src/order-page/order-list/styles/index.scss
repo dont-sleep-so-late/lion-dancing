@@ -1,0 +1,46 @@
+.order-list-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .category {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .order-data {
+    flex: 1;
+    margin-top: 20rpx;
+    .data-swiper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .swiper-item {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .data-scroll-view {
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          .order-list {
+            padding: 30rpx;
+
+            .order-item {
+              border-radius: 12rpx;
+              & + .order-item {
+                margin-top: 30rpx;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

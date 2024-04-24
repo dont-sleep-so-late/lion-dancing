@@ -1,0 +1,36 @@
+.common-problem {
+  position: relative;
+  width: 100%;
+
+  .problem-container {
+    width: 100%;
+
+    .problem-title {
+      width: 100%;
+      padding: 40rpx 30rpx;
+      font-size: 32rpx;
+      font-weight: bold;
+    }
+
+    .problem-data {
+      .problem-item {
+        padding: 30rpx;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+          color: var(--tn-color-grey);
+        }
+
+        & + .problem-item {
+          border-top: 1rpx solid var(--tn-color-gray-light);
+        }
+      }
+    }
+
+    & + .problem-container {
+      border-top: 20rpx solid var(--tn-color-gray-light);
+    }
+  }
+}

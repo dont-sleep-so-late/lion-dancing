@@ -1,0 +1,7 @@
+.tn-avatar-group.data-v-7394f886 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}

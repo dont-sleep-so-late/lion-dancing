@@ -1,0 +1,54 @@
+/* 轮播 start */
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 520rpx;
+
+  .swiper-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      position: absolute;
+      left: 30rpx;
+      bottom: 200rpx;
+      font-weight: bold;
+      padding: 4rpx 8rpx;
+      border-radius: 6rpx;
+      background: rgba(255, 255, 255, 1);
+      color: #070707;
+      mix-blend-mode: lighten;
+    }
+    .desc {
+      position: absolute;
+      left: 30rpx;
+      bottom: 140rpx;
+      font-size: 32rpx;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+}
+/* 轮播 end */
+
+/* 页面内容 start */
+.page {
+  position: relative;
+  width: 100%;
+  padding: 0rpx 30rpx;
+  margin-top: -100rpx;
+
+  .news-item {
+    & + .news-item {
+      margin-top: 30rpx;
+    }
+  }
+}
+/* 页面内容 end */

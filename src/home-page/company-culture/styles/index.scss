@@ -1,0 +1,61 @@
+.swiper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  :deep(.tn-swiper__indicator) {
+    right: 30rpx;
+    bottom: 80rpx;
+  }
+
+  .swiper-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    background-size: cover;
+    transition: background-position 0.5s ease-out;
+
+    .swiper-data {
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .assist-image {
+        width: 100%;
+        transform: translate(50rpx, 60rpx) scale(0.7);
+        transition: transform 0.5s ease-out;
+      }
+
+      .swiper-info {
+        transform: translateX(50rpx) scale(0.8);
+        transition: transform 0.5s ease-out;
+        color: #fff;
+        .title {
+          font-size: 32rpx;
+        }
+        .desc {
+          font-size: 26rpx;
+          margin-top: 16rpx;
+        }
+      }
+    }
+
+    &.active {
+      background-position: 50% 50%;
+      .assist-image {
+        transform: translate(0, 0) scale(1);
+      }
+      .swiper-info {
+        transform: translateX(0) scale(1);
+      }
+    }
+  }
+}

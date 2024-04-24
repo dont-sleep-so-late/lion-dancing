@@ -1,0 +1,43 @@
+/* 导航栏 start */
+.navbar {
+  position: relative;
+  width: 100%;
+  padding: 0rpx 30rpx;
+  display: flex;
+
+  .search-operation {
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 40rpx;
+  }
+
+  .category {
+    flex: 1;
+    margin-left: 20rpx;
+    padding-top: 4rpx;
+  }
+}
+/* 导航栏 end */
+
+/* 页面 start */
+.page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .page-container {
+    position: relative;
+    height: 100%;
+
+    .page-scroll {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+/* 页面 end */

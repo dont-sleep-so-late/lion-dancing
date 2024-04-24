@@ -1,0 +1,160 @@
+/* 顶部轮播 start */
+.swiper.data-v-27df514f {
+  position: relative;
+  width: 100%;
+  height: 600rpx;
+}
+.swiper .swiper-item.data-v-27df514f {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-item .image.data-v-27df514f {
+  width: 100%;
+  height: 450rpx;
+}
+.swiper .swiper-item .swiper-info.data-v-27df514f {
+  position: absolute;
+  left: 30rpx;
+  bottom: 280rpx;
+  color: #fff;
+  transform: translateX(20rpx) scale(0.6);
+  transition: transform 0.5s ease-out;
+}
+.swiper .swiper-item .swiper-info .title.data-v-27df514f {
+  font-size: 32rpx;
+}
+.swiper .swiper-item .swiper-info .desc.data-v-27df514f {
+  margin-top: 10rpx;
+}
+.swiper .swiper-item .assist-image.data-v-27df514f {
+  position: absolute;
+  width: auto;
+  height: 400rpx;
+  left: 46%;
+  bottom: 180rpx;
+  transform: translateX(20rpx) translateY(38%) scale(0.6);
+  transition: transform 0.5s ease-out;
+}
+.swiper .swiper-item.active .swiper-info.data-v-27df514f {
+  transform: translateX(0) scale(1);
+}
+.swiper .swiper-item.active .assist-image.data-v-27df514f {
+  transform: translateX(0) translateY(38%) scale(1);
+}
+/* 顶部轮播 end */
+/* 页面内容 start */
+.ecology-wrapper.data-v-27df514f {
+  position: relative;
+  width: 100%;
+  padding: 0rpx 30rpx 60rpx 30rpx;
+  /* 群友项目 start */
+  /* 群友项目 end */
+  /* 友情链接 start */
+  /* 友情链接 end */
+  /* 图鸟项目 start */
+  /* 图鸟项目 end */
+}
+.ecology-wrapper .group-link .group-link-list.data-v-27df514f {
+  margin-top: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ecology-wrapper .group-link .group-link-list .list-item.data-v-27df514f {
+  width: calc(50% - 15rpx);
+  display: flex;
+  align-items: center;
+  padding: 16rpx;
+  border-radius: 6rpx;
+  margin-bottom: 30rpx;
+}
+.ecology-wrapper .group-link .group-link-list .list-item .item-image.data-v-27df514f {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.ecology-wrapper .group-link .group-link-list .list-item .item-content.data-v-27df514f {
+  margin-left: 22rpx;
+}
+.ecology-wrapper .group-link .group-link-list .list-item .item-content .title.data-v-27df514f {
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-bottom: 6rpx;
+}
+.ecology-wrapper .group-link .group-link-list .list-item .item-content .desc.data-v-27df514f {
+  font-size: 24rpx;
+  color: var(--tn-color-gray);
+  transform: scale(0.7);
+  transform-origin: left center;
+}
+.ecology-wrapper .friend-link.data-v-27df514f {
+  margin-top: 60rpx;
+}
+.ecology-wrapper .friend-link .friend-link-list.data-v-27df514f {
+  margin-top: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ecology-wrapper .friend-link .friend-link-list .list-item.data-v-27df514f {
+  width: calc(33.3333333333% - 15rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+  border-radius: 8rpx;
+}
+.ecology-wrapper .friend-link .friend-link-list .list-item .item-image.data-v-27df514f {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.ecology-wrapper .friend-link .friend-link-list .list-item .item-title.data-v-27df514f {
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: 14rpx;
+}
+.ecology-wrapper .tuniao-project.data-v-27df514f {
+  margin-top: 60rpx;
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list.data-v-27df514f {
+  margin-top: 50rpx;
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item.data-v-27df514f {
+  padding: 30rpx;
+  border-radius: 8rpx;
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item .top.data-v-27df514f {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item .top .list-info.data-v-27df514f {
+  display: flex;
+  align-items: center;
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item .top .list-info .image.data-v-27df514f {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item .top .list-info .title.data-v-27df514f {
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-left: 12rpx;
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item .top .list-operation.data-v-27df514f {
+  font-size: 26rpx;
+  color: var(--tn-color-gray);
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item .item-desc.data-v-27df514f {
+  font-size: 26rpx;
+  margin-top: 16rpx;
+  color: var(--tn-color-gray-dark);
+}
+.ecology-wrapper .tuniao-project .tuniao-project-list .list-item + .list-item.data-v-27df514f {
+  margin-top: 30rpx;
+}
+/* 页面内容 end */

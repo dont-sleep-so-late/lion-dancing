@@ -1,0 +1,61 @@
+.tn-suspend-button.data-v-9b5941aa {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 100rpx;
+  height: 100rpx;
+  /* 动画 */
+  /* 尺寸 */
+  /* 绝对位置 */
+  /* 形状 */
+}
+.tn-suspend-button__icon.data-v-9b5941aa {
+  font-size: 60rpx;
+}
+.tn-suspend-button--float.data-v-9b5941aa {
+  animation: suspend-button-float-9b5941aa 4s ease-in-out infinite;
+}
+.tn-suspend-button--sm.data-v-9b5941aa {
+  width: 80rpx;
+  height: 80rpx;
+}
+.tn-suspend-button--sm .tn-suspend-button__icon.data-v-9b5941aa {
+  font-size: 50rpx;
+}
+.tn-suspend-button--lg.data-v-9b5941aa {
+  width: 120rpx;
+  height: 120rpx;
+}
+.tn-suspend-button--lg .tn-suspend-button__icon.data-v-9b5941aa {
+  font-size: 80rpx;
+}
+.tn-suspend-button--xl.data-v-9b5941aa {
+  width: 140rpx;
+  height: 140rpx;
+}
+.tn-suspend-button--xl .tn-suspend-button__icon.data-v-9b5941aa {
+  font-size: 90rpx;
+}
+.tn-suspend-button--fixed.data-v-9b5941aa {
+  position: fixed;
+}
+.tn-suspend-button--circle.data-v-9b5941aa {
+  border-radius: 50%;
+}
+.tn-suspend-button--square.data-v-9b5941aa {
+  border-radius: 8rpx;
+}
+/* 上下漂浮的动画 */
+@keyframes suspend-button-float-9b5941aa {
+0% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-30rpx);
+}
+100% {
+    transform: translateY(0);
+}
+}

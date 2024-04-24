@@ -1,0 +1,59 @@
+.honor-list.data-v-18489f78 {
+  position: relative;
+  width: 100%;
+  padding: 50rpx 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.honor-list .honor-item.data-v-18489f78 {
+  position: relative;
+  width: calc(50% - 15rpx);
+  margin-bottom: 30rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 12rpx;
+  padding-bottom: 20rpx;
+}
+.honor-list .honor-item .item-image.data-v-18489f78 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+.honor-list .honor-item .item-image .image.data-v-18489f78 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 8rpx;
+  clip-path: polygon(42% 15%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 18%);
+}
+.honor-list .honor-item .item-title.data-v-18489f78 {
+  position: relative;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-top: 16rpx;
+}
+.honor-list .honor-item .item-date.data-v-18489f78 {
+  position: absolute;
+  left: 14rpx;
+  top: 14rpx;
+  display: flex;
+  align-items: center;
+}
+.honor-list .honor-item .item-date .icon.data-v-18489f78 {
+  font-size: 38rpx;
+}
+.honor-list .honor-item .item-date .value.data-v-18489f78 {
+  font-size: 24rpx;
+  margin-left: 6rpx;
+  line-height: 1;
+  height: -moz-fit-content;
+  height: fit-content;
+}

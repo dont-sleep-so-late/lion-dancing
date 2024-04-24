@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "话题社区",
+  "usingComponents": {
+    "tn-graphic-card": "../../node-modules/tnuiv3p-tn-graphic-card/index"
+  }
+}

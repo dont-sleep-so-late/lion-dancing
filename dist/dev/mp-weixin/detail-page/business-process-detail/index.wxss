@@ -1,0 +1,20 @@
+.business-process-detail.data-v-9ee9269f {
+  padding: 30rpx;
+  padding-bottom: 160rpx;
+}
+.business-process-detail .process-content.data-v-9ee9269f {
+  padding: 20rpx;
+  border-radius: 6rpx;
+  color: var(--tn-color-grey);
+}
+.business-process-detail .process-content.data-v-9ee9269f::before {
+  z-index: -1;
+}
+/* 底部操作栏 start */
+.operation-bar.data-v-9ee9269f {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+/* 底部操作栏 end */

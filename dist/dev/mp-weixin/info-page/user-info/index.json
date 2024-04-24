@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "tn-picker": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/picker/src/picker",
+    "tn-date-time-picker": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/date-time-picker/src/date-time-picker",
+    "tn-update-user-info-popup": "../../node-modules/tnuiv3p-tn-update-user-info-popup/index"
+  }
+}

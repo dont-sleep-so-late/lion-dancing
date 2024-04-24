@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "产品详情",
+  "usingComponents": {
+    "tn-swiper": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper",
+    "cool-title": "../../components/cool-title/index"
+  }
+}

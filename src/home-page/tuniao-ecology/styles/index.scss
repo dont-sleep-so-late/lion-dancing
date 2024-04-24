@@ -1,0 +1,184 @@
+/* 顶部轮播 start */
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 600rpx;
+
+  .swiper-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .image {
+      width: 100%;
+      height: 450rpx;
+    }
+
+    .swiper-info {
+      position: absolute;
+      left: 30rpx;
+      bottom: 280rpx;
+      color: #fff;
+      transform: translateX(20rpx) scale(0.6);
+      transition: transform 0.5s ease-out;
+      .title {
+        font-size: 32rpx;
+      }
+      .desc {
+        margin-top: 10rpx;
+      }
+    }
+
+    .assist-image {
+      position: absolute;
+      width: auto;
+      height: 400rpx;
+      left: 46%;
+      bottom: 180rpx;
+      transform: translateX(20rpx) translateY(38%) scale(0.6);
+      transition: transform 0.5s ease-out;
+    }
+
+    &.active {
+      .swiper-info {
+        transform: translateX(0) scale(1);
+      }
+      .assist-image {
+        transform: translateX(0) translateY(38%) scale(1);
+      }
+    }
+  }
+}
+/* 顶部轮播 end */
+
+/* 页面内容 start */
+.ecology-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0rpx 30rpx 60rpx 30rpx;
+
+  /* 群友项目 start */
+  .group-link {
+    .group-link-list {
+      margin-top: 50rpx;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .list-item {
+        width: calc(100% / 2 - 15rpx);
+        display: flex;
+        align-items: center;
+        padding: 16rpx;
+        border-radius: 6rpx;
+        margin-bottom: 30rpx;
+        .item-image {
+          width: 80rpx;
+          height: 80rpx;
+          border-radius: 50%;
+        }
+        .item-content {
+          margin-left: 22rpx;
+          .title {
+            font-size: 26rpx;
+            font-weight: bold;
+            margin-bottom: 6rpx;
+          }
+          .desc {
+            font-size: 24rpx;
+            color: var(--tn-color-gray);
+            transform: scale(0.7);
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+  }
+  /* 群友项目 end */
+
+  /* 友情链接 start */
+  .friend-link {
+    margin-top: 60rpx;
+
+    .friend-link-list {
+      margin-top: 50rpx;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .list-item {
+        width: calc(100% / 3 - 15rpx);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30rpx;
+        padding: 30rpx;
+        border-radius: 8rpx;
+
+        .item-image {
+          width: 80rpx;
+          height: 80rpx;
+          border-radius: 50%;
+        }
+        .item-title {
+          font-size: 26rpx;
+          font-weight: bold;
+          margin-top: 14rpx;
+        }
+      }
+    }
+  }
+  /* 友情链接 end */
+
+  /* 图鸟项目 start */
+  .tuniao-project {
+    margin-top: 60rpx;
+
+    .tuniao-project-list {
+      margin-top: 50rpx;
+
+      .list-item {
+        padding: 30rpx;
+        border-radius: 8rpx;
+
+        .top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .list-info {
+            display: flex;
+            align-items: center;
+
+            .image {
+              width: 40rpx;
+              height: 40rpx;
+              border-radius: 50%;
+            }
+            .title {
+              font-size: 26rpx;
+              font-weight: bold;
+              margin-left: 12rpx;
+            }
+          }
+          .list-operation {
+            font-size: 26rpx;
+            color: var(--tn-color-gray);
+          }
+        }
+
+        .item-desc {
+          font-size: 26rpx;
+          margin-top: 16rpx;
+          color: var(--tn-color-gray-dark);
+        }
+
+        & + .list-item {
+          margin-top: 30rpx;
+        }
+      }
+    }
+  }
+  /* 图鸟项目 end */
+}
+/* 页面内容 end */

@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'tuniao-xiaowei';
+  src: url('https://resource.tuniaokj.com/images/vue3-template/template2-website/font/tuniao-xiaowei.ttf');
+}
+
+/* 顶部背景 start */
+.top-bg {
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  z-index: -1;
+  background: url('https://resource.tuniaokj.com/images/my/my-bg4.png')
+    no-repeat;
+  background-size: 100% auto;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+/* 顶部背景 end */
+
+/* 页面内容 start */
+.page {
+  position: relative;
+  width: 100%;
+  padding: 0rpx 30rpx;
+
+  /* 用户信息 start */
+  .user-info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .info-content {
+      display: flex;
+      align-items: center;
+
+      .avatar {
+        position: relative;
+        width: 110rpx;
+        height: 110rpx;
+        border-radius: 50%;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 116%;
+          height: 116%;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          box-shadow: 0rpx 0rpx 80rpx 0rpx rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      .content {
+        margin-left: 28rpx;
+
+        .nickname {
+          font-size: 38rpx;
+          font-weight: bold;
+          margin-bottom: 12rpx;
+        }
+
+        .uid {
+          display: flex;
+          align-items: center;
+
+          .text {
+            font-size: 34rpx;
+            color: var(--tn-color-gray);
+          }
+
+          .copy {
+            color: var(--tn-color-grey);
+            margin-left: 10rpx;
+          }
+        }
+      }
+    }
+
+    .setting-icon {
+      color: var(--tn-color-gray);
+      font-size: 50rpx;
+    }
+  }
+  /* 用户信息 end */
+
+  /* 授权登录 start */
+  .login-btn {
+    background-color: #1d2541;
+    color: #fff;
+    padding: 20rpx 0rpx;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1000rpx;
+    line-height: 1;
+
+    .icon {
+      margin-right: 20rpx;
+      font-size: 42rpx;
+    }
+  }
+  /* 授权登录 end */
+
+  /* 会员权益 start */
+  .member-rights {
+    position: relative;
+    width: 100%;
+    padding: 30rpx 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(-120deg, #3e445a, #31374a, #2b3042, #262b3c);
+    margin-top: 60rpx;
+    border-radius: 20rpx;
+
+    &::before {
+      z-index: -1;
+    }
+
+    .member-content {
+      position: relative;
+      z-index: 3;
+      .grade {
+        font-family: 'tuniao-xiaowei';
+        font-size: 42rpx;
+        font-weight: bold;
+        background-image: linear-gradient(360deg, #ffe3a3, #feeacc);
+      }
+      .desc {
+        font-size: 26rpx;
+        margin-top: 16rpx;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    .rights-btn {
+      position: relative;
+      width: 160rpx;
+      border-radius: 1000rpx;
+      background-color: #f1c68e;
+      color: #634738;
+      padding: 14rpx 0;
+      z-index: 3;
+      font-weight: bold;
+
+      &::before {
+        z-index: 1;
+      }
+      text {
+        z-index: inherit;
+      }
+    }
+
+    /* 图片波浪 start */
+    .image-wave-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      border-radius: inherit;
+
+      .image-wave {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 100%;
+        background: url('https://resource.tuniaokj.com/images/wave/wave-2.png');
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        animation-name: waveAnimation;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        &:nth-child(1) {
+          opacity: 0.1;
+          background-size: 50% 45px;
+          animation-duration: 4s;
+        }
+        &:nth-child(2) {
+          opacity: 0.2;
+          background-size: 50% 50px;
+          animation-duration: 3.5s;
+        }
+        &:nth-child(3) {
+          opacity: 0.3;
+          background-size: 50% 35px;
+          animation-duration: 2s;
+        }
+      }
+    }
+    /* 图片波浪 end */
+  }
+  /* 会员权益 end */
+
+  /* 分类 start */
+  .category {
+    position: relative;
+    width: 100%;
+    padding: 40rpx 0rpx;
+    border-radius: 12rpx;
+    display: flex;
+    align-items: center;
+    margin-top: 60rpx;
+    background-color: #fff;
+
+    .category-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        position: relative;
+        font-size: 50rpx;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 20rpx;
+          height: 20rpx;
+          background-color: var(--tn-color-blue-light);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .title {
+        margin-top: 14rpx;
+      }
+    }
+  }
+  /* 分类 end */
+
+  /* 列表 start */
+  .list {
+    position: relative;
+    width: 100%;
+    margin-top: 40rpx;
+    background-color: #fff;
+    border-radius: 12rpx;
+    padding: 20rpx 30rpx;
+
+    .list-item {
+      width: 100%;
+      padding: 20rpx 0rpx;
+      display: flex;
+      align-items: center;
+
+      .left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .icon {
+          font-size: 40rpx;
+          color: #7c8191;
+        }
+        .text {
+          margin-left: 12rpx;
+        }
+      }
+
+      .right {
+        flex-grow: 0;
+        flex-shrink: 0;
+        .icon {
+          font-size: 32rpx;
+          color: var(--tn-color-gray);
+        }
+        .text {
+          font-size: 26rpx;
+        }
+      }
+    }
+  }
+  /* 列表 end */
+}
+/* 页面内容 end */
+
+/* 页脚 start */
+.footer {
+  margin-top: 30rpx;
+}
+/* 页脚 end */
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

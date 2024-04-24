@@ -1,0 +1,40 @@
+.order-list-page.data-v-846a9455 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.order-list-page .category.data-v-846a9455 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+.order-list-page .order-data.data-v-846a9455 {
+  flex: 1;
+  margin-top: 20rpx;
+}
+.order-list-page .order-data .data-swiper.data-v-846a9455 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.order-list-page .order-data .data-swiper .swiper-item.data-v-846a9455 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.order-list-page .order-data .data-swiper .swiper-item .data-scroll-view.data-v-846a9455 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.order-list-page .order-data .data-swiper .swiper-item .data-scroll-view .order-list.data-v-846a9455 {
+  padding: 30rpx;
+}
+.order-list-page .order-data .data-swiper .swiper-item .data-scroll-view .order-list .order-item.data-v-846a9455 {
+  border-radius: 12rpx;
+}
+.order-list-page .order-data .data-swiper .swiper-item .data-scroll-view .order-list .order-item + .order-item.data-v-846a9455 {
+  margin-top: 30rpx;
+}

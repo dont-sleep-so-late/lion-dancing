@@ -1,0 +1,68 @@
+.tn-tabbar-item.data-v-c5d689a1 {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1;
+  /* 图标 start */
+  /* 图标 end */
+  /* 文字 start */
+  /* 文字 end */
+  /* 凸起按钮 start */
+  /* 凸起按钮 end */
+  /* 单元素 start */
+  /* 单元素 end */
+  /* 是否激活状态 start */
+  /* 是否激活状态 end */
+}
+.tn-tabbar-item__icon.data-v-c5d689a1 {
+  position: relative;
+  font-size: 40rpx;
+  line-height: 1;
+  margin: 4rpx 0rpx;
+  transition: all 0.3s ease;
+  transform-origin: center center;
+}
+.tn-tabbar-item__text.data-v-c5d689a1 {
+  font-size: 22rpx;
+  margin: 8rpx 0rpx 12rpx 0rpx;
+  transition: all 0.3s ease;
+  transform-origin: center center;
+}
+.tn-tabbar-item__bulge.data-v-c5d689a1 {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.tn-tabbar-item.is-only-element.data-v-c5d689a1 {
+  justify-content: center;
+}
+.tn-tabbar-item.is-only-element .tn-tabbar-item__icon.data-v-c5d689a1 {
+  margin: 0;
+}
+.tn-tabbar-item.is-only-element .tn-tabbar-item__text.data-v-c5d689a1 {
+  margin: 0;
+}
+.tn-tabbar-item.is-active.is-animation .tn-tabbar-item__icon.data-v-c5d689a1 {
+  animation: normalSwitchAnimation-c5d689a1 0.3s ease;
+}
+@keyframes normalSwitchAnimation-c5d689a1 {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.2);
+}
+100% {
+    transform: scale(1);
+}
+}

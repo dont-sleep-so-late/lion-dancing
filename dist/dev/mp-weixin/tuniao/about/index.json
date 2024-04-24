@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "关于图鸟",
+  "usingComponents": {
+    "tn-suspend-button": "../../node-modules/tnuiv3p-tn-suspend-button/index"
+  }
+}
