@@ -11,7 +11,7 @@ const { tuniaoProjects } = useMemberRights()
     <view class="member-rights tn-shadow-blur">
       <view class="member-content">
         <view class="grade tn-text-transparent">至尊 VIP</view>
-        <view class="desc">尊享图鸟UI所有开源(付费)项目的代码</view>
+        <view class="desc">尊享狮业有承UI所有开源(付费)项目的代码</view>
       </view>
       <view class="price tn-gradient-bg__orangeyellow tn-text-transparent">
         <text class="unit">￥</text>1299 / 终身

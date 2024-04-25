@@ -10,7 +10,7 @@ const TnTabbar = () => "../../node-modules/@tuniao/tnui-vue3-uniapp/components/t
 const TnTabbarItem = () => "../../node-modules/@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar-item.js";
 const PageA = () => "./sub-pages/page-a/index.js";
 const PageB = () => "./sub-pages/page-b/index.js";
-const PageC = () => "./sub-pages/page-c/index.js";
+const PageC = () => "./sub-pages/page-c/index2.js";
 const PageD = () => "./sub-pages/page-d/index.js";
 const PageE = () => "./sub-pages/page-e/index.js";
 const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({

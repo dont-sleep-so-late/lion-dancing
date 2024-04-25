@@ -18,12 +18,48 @@ export const useCompanyAlbum = () => {
 
   // 生成相册图片
   const generateAlbumData = () => {
-    const album : Album[] = Array.from({ length: 10 }).map(() => ({
-      id: generateRandomNumber(1, 100).toString(),
-      title: '相册',
-      image: `https://resource.tuniaokj.com/images/album/xiong${Math.floor(Math.random() * 10) + 1
-        }.jpg`,
-    }))
+    const album : Album[] = [
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240424160203.jpg`,
+      },
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240424160201.jpg`,
+      },
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240424160127.jpg`,
+      },
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713929237490.jpg`,
+      },
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713878439910.jpg`,
+      },
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713878412366.jpg`,
+      },
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713878406472.jpg`,
+      },
+      {
+        id: generateRandomNumber(1, 100).toString(),
+        title: '相册',
+        image: `https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713878345680.jpg`,
+      },
+    ];
     albumList.value = albumList.value.concat(album)
   }
   generateAlbumData()

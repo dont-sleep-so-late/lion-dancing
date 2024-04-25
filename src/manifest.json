@@ -7,7 +7,7 @@
   "transformPx": false,
   "app-plus": {
     "usingComponents": true,
-    "nvueStyleCompiler": "图鸟官网",
+    "nvueStyleCompiler": "狮业有承官网",
     "compilerVersion": 3,
     "splashscreen": {
       "alwaysShowBeforeRender": true,

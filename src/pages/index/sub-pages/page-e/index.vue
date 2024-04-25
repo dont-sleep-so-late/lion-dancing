@@ -1,27 +1,27 @@
 <script lang="ts" setup>
-import TnFooter from '@tuniao/tnui-vue3-uniapp/components/footer/src/footer.vue'
-import PageContainer from '../../components/page-container/index.vue'
-import { useSubPage } from './composables'
+  import TnFooter from '@tuniao/tnui-vue3-uniapp/components/footer/src/footer.vue'
+  import PageContainer from '../../components/page-container/index.vue'
+  import { useSubPage } from './composables'
 
-const {
-  navBarInfo,
-  userInfo,
-  loginHandle,
-  navUserInfoPage,
-  navCommonProblemPage,
-  navMemberRightsPage,
-  navOrderListPage,
-} = useSubPage()
+  const {
+    navBarInfo,
+    userInfo,
+    loginHandle,
+    navUserInfoPage,
+    navCommonProblemPage,
+    navMemberRightsPage,
+    navOrderListPage,
+  } = useSubPage()
 </script>
 
 // #ifdef MP-WEIXIN
 <script lang="ts">
-export default {
-  options: {
-    // 在微信小程序中将组件节点渲染为虚拟节点，更加接近Vue组件的表现(不会出现shadow节点下再去创建元素)
-    virtualHost: true,
-  },
-}
+  export default {
+    options: {
+      // 在微信小程序中将组件节点渲染为虚拟节点，更加接近Vue组件的表现(不会出现shadow节点下再去创建元素)
+      virtualHost: true,
+    },
+  }
 </script>
 // #endif
 
@@ -59,25 +59,22 @@ export default {
       </view>
 
       <!-- 会员等级、权益 -->
-      <view
-        class="member-rights tn-shadow-blur"
-        @tap.stop="navMemberRightsPage"
-      >
+      <!--      <view class="member-rights tn-shadow-blur" @tap.stop="navMemberRightsPage">
         <view class="member-content">
           <view class="grade tn-text-transparent">至尊 VIP</view>
           <view class="desc">会员福利，助力事业一骑绝尘</view>
         </view>
         <view class="rights-btn tn-shadow-blur tn-flex-center">
           <text>权 益</text>
-        </view>
+        </view> -->
 
-        <!-- 图片波浪 -->
-        <view class="image-wave-container">
+      <!-- 图片波浪 -->
+      <!--        <view class="image-wave-container">
           <view class="image-wave" />
           <view class="image-wave" />
           <view class="image-wave" />
         </view>
-      </view>
+      </view> -->
 
       <!-- 分类 -->
       <view class="category tn-shadow">
@@ -114,7 +111,7 @@ export default {
             <view class="icon">
               <TnIcon name="plane-fill" />
             </view>
-            <view class="text"> 开源地址 </view>
+            <view class="text"> 商演对接 </view>
           </view>
           <view class="right">
             <view class="icon">
@@ -183,11 +180,11 @@ export default {
       </view>
     </view>
     <view class="footer">
-      <TnFooter :fixed="false" content="图鸟科技 提供技术支持" />
+      <TnFooter :fixed="false" content="GDOU 提供技术支持" />
     </view>
   </PageContainer>
 </template>
 
 <style lang="scss" scoped>
-@import './styles/index.scss';
+  @import './styles/index.scss';
 </style>

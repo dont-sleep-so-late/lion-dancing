@@ -3,11 +3,11 @@ const common_vendor = require("../../../common/vendor.js");
 const useMemberRights = () => {
   const tuniaoProjects = common_vendor.ref([
     {
-      name: "图鸟UI",
+      name: "狮业有承UI",
       isVIP: false
     },
     {
-      name: "图鸟vue3",
+      name: "狮业有承vue3",
       isVIP: false
     },
     {

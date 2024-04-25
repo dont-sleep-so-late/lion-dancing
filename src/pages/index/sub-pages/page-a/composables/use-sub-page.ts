@@ -12,10 +12,10 @@ export const useSubPage = () => {
   const instance = getCurrentInstance()
   // 顶部轮播图
   const swiperData = ref<string[]>([
-    '/src/assets/bg/1713878345680.jpg',
-    '/src/assets/bg/1713878406472.jpg',
-    '/src/assets/bg/1713878412366.jpg',
-    '/src/assets/bg/1713929237490.jpg',
+    'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713878345680.jpg',
+    'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713878406472.jpg',
+    'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713878412366.jpg',
+    'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/1713929237490.jpg',
   ])
 
   // 热门分类
@@ -26,7 +26,7 @@ export const useSubPage = () => {
       icon: 'image',
       backgroundColor: {
         type: ColorType.select,
-        value: '#3c7efe',
+        value: '#82B2FF',
       },
       url: '/home-page/company-album/index',
       // url: '/home-page/brand-introduction/index',
@@ -37,29 +37,39 @@ export const useSubPage = () => {
       icon: 'video-square',
       backgroundColor: {
         type: ColorType.select,
-        value: '#2be9bb',
+        value: '#24BA97',
       },
       url: '/home-page/win-win/index',
     },
     {
       id: '3',
-      name: '新闻中心',
-      icon: 'reply',
+      name: '服务中心',
+      icon: 'menu-alone',
       backgroundColor: {
         type: ColorType.select,
         value: '#e93c32',
       },
-      url: '/home-page/topic-community/index',
+      url: '/home-page/service-center/index',
     },
     {
       id: '4',
+      name: '新闻中心',
+      icon: 'reply',
+      backgroundColor: {
+        type: ColorType.select,
+        value: '#5F7E8B',
+      },
+      url: '/home-page/topic-community/index',
+    },
+    {
+      id: '5',
       name: '地图导航',
       icon: 'map',
       backgroundColor: {
         type: ColorType.select,
-        value: '#ffa929',
+        value: '#CC5A36',
       },
-      url: '/home-page/tuniao-ecology/index',
+      url: '/home-page/company-location/index',
     },
   ])
 
@@ -76,9 +86,9 @@ export const useSubPage = () => {
 
   // 最新资讯
   const hotCaseData = ref<string[]>([
-    '/src/assets/bg/微信图片_20240424155803.jpg',
-    '/src/assets/bg/微信图片_20240424160105.jpg',
-    '/src/assets/bg/微信图片_20240424160112.jpg',
+    'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/微信图片_20240424155803.jpg',
+    'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/微信图片_20240424160105.jpg',
+    'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/微信图片_20240424160112.jpg',
   ])
 
   const {
@@ -98,7 +108,7 @@ export const useSubPage = () => {
     updateTargetTriggerValue(info.height)
   }
 
-  // 跳转到关于图鸟页面
+  // 跳转到关于狮业有承页面
   const navAboutPage = () => {
     tnNavPage('/tuniao/about/index')
   }

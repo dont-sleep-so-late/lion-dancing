@@ -6,29 +6,19 @@ import { indexPageContextKey } from '../tokens'
 import type { IndexSubPageContext } from '../tokens'
 
 type TabbarItem = {
-  text: string
-  icon: string
-  activeIcon: string
+  text : string
+  icon : string
+  activeIcon : string
 }
 type TabbarData = TabbarItem[]
 
 export const useIndex = () => {
   // 导航栏数据
-  const tabbarData: TabbarData = [
+  const tabbarData : TabbarData = [
     {
       text: '首页',
       icon: 'home-in',
       activeIcon: 'home-in-fill',
-    },
-    {
-      text: '产品',
-      icon: 'iot',
-      activeIcon: 'iot-fill',
-    },
-    {
-      text: '案例',
-      icon: 'rocket',
-      activeIcon: 'reload-planet-fill',
     },
     {
       text: '资讯',
@@ -36,7 +26,17 @@ export const useIndex = () => {
       activeIcon: 'topics-fill',
     },
     {
-      text: '图鸟',
+      text: 'AI数字人导游',
+      icon: 'emoji-good',
+      activeIcon: 'emoji-good-fill',
+    },
+    {
+      text: '装备专区',
+      icon: 'iot',
+      activeIcon: 'iot-fill',
+    },
+    {
+      text: '狮业有承',
       icon: 'my-circle',
       activeIcon: 'my-circle-fill',
     },
@@ -51,10 +51,10 @@ export const useIndex = () => {
 
   // 底部导航栏发生切换事件
   // 根据index查找对应的页面
-  const _findPageByIndex = (index: string | number) => {
+  const _findPageByIndex = (index : string | number) => {
     return items.value.find((item) => item.index === index)
   }
-  const tabbarChangeHandle = (index: string | number) => {
+  const tabbarChangeHandle = (index : string | number) => {
     if (typeof index === 'string') {
       index = Number.parseInt(index)
     }
@@ -70,7 +70,7 @@ export const useIndex = () => {
   }
 
   // 处理页面对应scroll-view滚动事件
-  const scrollViewScrollHandle = (event: any) => {
+  const scrollViewScrollHandle = (event : any) => {
     const { scrollTop, scrollLeft } = event.detail
     _findPageByIndex(currentTabbarIndex.value)?.onScroll?.({
       top: scrollTop,

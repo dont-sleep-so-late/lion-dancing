@@ -10,7 +10,7 @@ export const useUserInfo = () => {
     avatar: 'https://resource.tuniaokj.com/images/avatar/xiong.jpg',
     phone: '18888888888',
     sex: 2,
-    desc: '静下心来，做好图鸟',
+    desc: '静下心来，做好狮业有承',
     birthday: '1995-06-01',
     profession: '前端开发',
   })

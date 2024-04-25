@@ -6,14 +6,14 @@ interface TuniaoProject {
 }
 
 export const useMemberRights = () => {
-  // 图鸟项目
+  // 狮业有承项目
   const tuniaoProjects = ref<TuniaoProject[]>([
     {
-      name: '图鸟UI',
+      name: '狮业有承UI',
       isVIP: false,
     },
     {
-      name: '图鸟vue3',
+      name: '狮业有承vue3',
       isVIP: false,
     },
     {

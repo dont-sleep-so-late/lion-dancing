@@ -15,9 +15,9 @@ export const useArticleDetail = () => {
   const getData = (id: string) => {
     article.value = {
       id,
-      title: '图鸟官网模板上线',
-      desc: '图鸟官网模板上线，欢迎大家使用',
-      content: '图鸟官网模板上线，欢迎大家使用',
+      title: '狮业有承官网模板上线',
+      desc: '狮业有承官网模板上线，欢迎大家使用',
+      content: '狮业有承官网模板上线，欢迎大家使用',
       mainImage:
         'https://resource.tuniaokj.com/images/publicity/publicity-vue2.jpg',
       tags: [],
@@ -34,12 +34,12 @@ export const useArticleDetail = () => {
     recommendArticles.value = [
       {
         id,
-        title: '图鸟官网模板上线',
-        desc: '图鸟官网模板上线，欢迎大家使用',
-        content: '图鸟官网模板上线，欢迎大家使用',
+        title: '狮业有承官网模板上线',
+        desc: '狮业有承官网模板上线，欢迎大家使用',
+        content: '狮业有承官网模板上线，欢迎大家使用',
         mainImage:
           'https://resource.tuniaokj.com/images/publicity/publicity-vue2.jpg',
-        tags: ['图鸟'],
+        tags: ['狮业有承'],
         hotCount: generateRandomNumber(1, 100),
         replyCount: generateRandomNumber(1, 100),
         likeCount: generateRandomNumber(1, 100),
@@ -50,12 +50,12 @@ export const useArticleDetail = () => {
       },
       {
         id,
-        title: '图鸟官网模板上线',
-        desc: '图鸟官网模板上线，欢迎大家使用',
-        content: '图鸟官网模板上线，欢迎大家使用',
+        title: '狮业有承官网模板上线',
+        desc: '狮业有承官网模板上线，欢迎大家使用',
+        content: '狮业有承官网模板上线，欢迎大家使用',
         mainImage:
           'https://resource.tuniaokj.com/images/publicity/publicity-vue2.jpg',
-        tags: ['图鸟'],
+        tags: ['狮业有承'],
         hotCount: generateRandomNumber(1, 100),
         replyCount: generateRandomNumber(1, 100),
         likeCount: generateRandomNumber(1, 100),

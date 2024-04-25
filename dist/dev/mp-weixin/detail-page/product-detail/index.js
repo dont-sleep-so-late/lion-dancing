@@ -80,7 +80,7 @@ const _sfc_defineComponent = /* @__PURE__ */ common_vendor.defineComponent({
           };
         }),
         k: common_vendor.p({
-          title: "图鸟科技 · 产品详情",
+          title: "醒狮周边 · 产品详情",
           ["cool-bg-number"]: 6
         }),
         l: common_vendor.t((_f = common_vendor.unref(product)) == null ? void 0 : _f.content),

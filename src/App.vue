@@ -5,7 +5,7 @@
     // eslint-disable-next-line no-console
     console.log('欢迎使用狮业有成')
 
-    // 加载字体
+    // 加 载字体
     uni.loadFontFace({
       family: 'tuniao-xiaowei',
       source:

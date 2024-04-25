@@ -16,7 +16,7 @@ const useBrandIntroduction = () => {
       id: "2",
       name: "品牌介绍-2",
       image: "https://resource.tuniaokj.com/images/swiper/read.jpg",
-      title: "图鸟南南",
+      title: "狮业有承南南",
       desc: "欢迎加入东东们",
       remark: "如果你也有不错的产品"
     },
@@ -24,15 +24,15 @@ const useBrandIntroduction = () => {
       id: "3",
       name: "品牌介绍-3",
       image: "https://resource.tuniaokj.com/images/swiper/swiper2.jpg",
-      title: "图鸟西西",
-      desc: "一起玩转图鸟UI",
+      title: "狮业有承西西",
+      desc: "一起玩转狮业有承UI",
       remark: "用最少的代码实现最骚的操作"
     },
     {
       id: "4",
       name: "品牌介绍-4",
       image: "https://resource.tuniaokj.com/images/swiper/swiper3.jpg",
-      title: "图鸟北北",
+      title: "狮业有承北北",
       desc: "微信号 tnkewo",
       remark: "商业合作联系作者"
     },
@@ -40,16 +40,16 @@ const useBrandIntroduction = () => {
       id: "5",
       name: "品牌介绍-5",
       image: "https://resource.tuniaokj.com/images/swiper/job.jpg",
-      title: "图鸟猪猪",
+      title: "狮业有承猪猪",
       desc: "努力成为大佬",
       remark: "一起加油吖"
     }
   ]);
   const brandIntroductionData = common_vendor.ref("");
   const authorInfo = common_vendor.ref({
-    nickname: "图鸟凶姐",
+    nickname: "狮业有承凶姐",
     office: "高级UI设计师",
-    company: "化州市图鸟科技有限公司",
+    company: "化州市狮业有承科技有限公司",
     avatar: "https://resource.tuniaokj.com/images/xiongjie/x14.jpg",
     wechat: "tnkewo",
     wechatCode: "https://resource.tuniaokj.com/images/gitee_introduce_file/bottom.jpg"

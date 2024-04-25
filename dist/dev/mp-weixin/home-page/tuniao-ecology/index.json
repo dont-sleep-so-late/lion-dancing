@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "图鸟生态",
+  "navigationBarTitleText": "狮业有承生态",
   "usingComponents": {
     "tn-swiper": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper",
     "tn-cool-icon": "../../node-modules/tnuiv3p-tn-cool-icon/index",

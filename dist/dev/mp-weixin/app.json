@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/index/sub-pages/page-c/index"
   ],
   "subPackages": [
     {
@@ -51,7 +52,7 @@
   "window": {
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "图鸟官网",
+    "navigationBarTitleText": "狮业有承",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },

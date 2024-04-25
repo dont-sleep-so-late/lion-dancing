@@ -1,5 +1,5 @@
 {
-    "name": "🎏 图鸟模板-vue3",
+    "name": "?? 狮业有承模板-vue3",
     "version": "1.1.0",
     "scripts": {
         "dev:app": "uni -p app",
@@ -84,11 +84,11 @@
         "vue-tsc": "^1.0.24"
     },
     "id": "tuniao-site-vue3",
-    "displayName": "🎏 图鸟模板-vue3",
-    "description": "企业官网，是基于 图鸟VUE3 进行开发的纯前端模板，支持微信小程序、支付宝小程序、APP和H5。",
+    "displayName": "?? 狮业有承模板-vue3",
+    "description": "企业官网，是基于 狮业有承VUE3 进行开发的纯前端模板，支持微信小程序、支付宝小程序、APP和H5。",
     "keywords": [
         "vue3",
-        "图鸟UI",
+        "狮业有承UI",
         "typescript",
         "酷炫前端页面模板"
     ],

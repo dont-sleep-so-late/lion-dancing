@@ -1,1 +1,0 @@
-<view class="{{['data-v-04540a21', b]}}" style="{{c}}"><image wx:for="{{a}}" wx:for-item="item" wx:key="a" class="{{['data-v-04540a21', item.b]}}" style="{{item.c}}" src="{{item.d}}" mode="aspectFill" catchtap="{{item.e}}"/></view>

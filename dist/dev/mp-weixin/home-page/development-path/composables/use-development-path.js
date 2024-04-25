@@ -9,17 +9,17 @@ const useDevelopmentPath = () => {
       data: [
         {
           id: "11",
-          title: "推出图鸟UI",
-          desc: "图鸟UI是一套基于Vue3.0的UI组件库，它是一个面向未来的组件库，它的目标是为了提升开发者的开发效率，让开发者更专注于业务。",
+          title: "推出狮业有承UI",
+          desc: "狮业有承UI是一套基于Vue3.0的UI组件库，它是一个面向未来的组件库，它的目标是为了提升开发者的开发效率，让开发者更专注于业务。",
           image: "https://resource.tuniaokj.com/images/bless/bless-tiger.png",
-          tags: ["图鸟UI", "Vue3.0", "组件库"]
+          tags: ["狮业有承UI", "Vue3.0", "组件库"]
         },
         {
           id: "12",
-          title: "推出图鸟UI",
-          desc: "图鸟UI是一套基于Vue3.0的UI组件库，它是一个面向未来的组件库，它的目标是为了提升开发者的开发效率，让开发者更专注于业务。",
+          title: "推出狮业有承UI",
+          desc: "狮业有承UI是一套基于Vue3.0的UI组件库，它是一个面向未来的组件库，它的目标是为了提升开发者的开发效率，让开发者更专注于业务。",
           image: "https://resource.tuniaokj.com/images/bless/bless-tiger.png",
-          tags: ["图鸟UI", "Vue3.0", "组件库"]
+          tags: ["狮业有承UI", "Vue3.0", "组件库"]
         }
       ]
     },
@@ -30,17 +30,17 @@ const useDevelopmentPath = () => {
       data: [
         {
           id: "21",
-          title: "图鸟成立",
-          desc: "图鸟成为一个小工作室",
+          title: "狮业有承成立",
+          desc: "狮业有承成为一个小工作室",
           image: "https://resource.tuniaokj.com/images/bless/bless-tiger.png",
-          tags: ["图鸟"]
+          tags: ["狮业有承"]
         },
         {
           id: "22",
-          title: "图鸟成立",
-          desc: "图鸟成为一个小工作室",
+          title: "狮业有承成立",
+          desc: "狮业有承成为一个小工作室",
           image: "https://resource.tuniaokj.com/images/bless/bless-tiger.png",
-          tags: ["图鸟"]
+          tags: ["狮业有承"]
         }
       ]
     },

@@ -27,28 +27,53 @@ const useSubPage = () => {
   const generateProductData = () => {
     return {
       id: utils_localMock.generateRandomNumber(1, 100).toString(),
-      title: "图鸟模板",
-      desc: "图鸟模板，是一套你值得拥有的模板",
+      title: "醒狮周边",
+      desc: "醒狮周边，是一套你值得拥有的醒狮周边",
       images: [
-        "https://resource.tuniaokj.com/images/shop/bag1.jpg",
-        "https://resource.tuniaokj.com/images/shop/bag2.jpg",
-        "https://resource.tuniaokj.com/images/shop/card.jpg",
-        "https://resource.tuniaokj.com/images/shop/computer1.jpg",
-        "https://resource.tuniaokj.com/images/shop/computer2.jpg",
-        "https://resource.tuniaokj.com/images/shop/cup1.jpg",
-        "https://resource.tuniaokj.com/images/shop/cup2.jpg"
+        "/src/assets/shop/baijian.png",
+        "/src/assets/shop/bianlitie.jpg",
+        "/src/assets/shop/bingxiangtie.jpg",
+        "/src/assets/shop/chezaishiping.jpg",
+        "/src/assets/shop/cixiu (1).jpg",
+        "/src/assets/shop/cixiu (2).jpg",
+        "/src/assets/shop/denglong (1).jpg",
+        "/src/assets/shop/denglong (2).jpg",
+        "/src/assets/shop/dingshuji (1).jpg",
+        "/src/assets/shop/dingshuji (2).jpg",
+        "/src/assets/shop/gouwudai.jpg",
+        "/src/assets/shop/huaban.jpg",
+        "/src/assets/shop/huizhang.jpg",
+        "/src/assets/shop/jiaobu.jpg",
+        "/src/assets/shop/jimu.jpg",
+        "/src/assets/shop/jimu2 (1).jpg",
+        "/src/assets/shop/jimu2 (2).jpg",
+        "/src/assets/shop/jimu2 (3).jpg",
+        "/src/assets/shop/jimu2 (4).jpg",
+        "/src/assets/shop/maozi.jpg",
+        "/src/assets/shop/qichepaijian.jpg",
+        "/src/assets/shop/shizitou.jpg",
+        "/src/assets/shop/shoujike.jpg",
+        "/src/assets/shop/shubiaodian.jpg",
+        "/src/assets/shop/shuiping.jpg",
+        "/src/assets/shop/shuzhibaijian (1).jpg",
+        "/src/assets/shop/shuzhibaijian (2).jpg",
+        "/src/assets/shop/shuzhibaijian (3).jpg",
+        "/src/assets/shop/shuzhibaijian (4).jpg",
+        "/src/assets/shop/shuzhibaijian (5).jpg",
+        "/src/assets/shop/stone (1).jpg",
+        "/src/assets/shop/stone (2).jpg",
+        "/src/assets/shop/taicui.jpg",
+        "/src/assets/shop/taoyi.jpg",
+        "/src/assets/shop/xiongshi.jpg",
+        "/src/assets/shop/yanzhao.jpg"
       ].sort(() => Math.random() - 0.5),
-      price: utils_localMock.generateRandomFloat(1, 1e3),
+      price: utils_localMock.generateRandomFloat(1, 200),
       sale: utils_localMock.generateRandomNumber(1, 1e3),
-      content: "图鸟模板，是一套你值得拥有的模板",
+      content: "醒狮周边，是一套你值得拥有的醒狮周边",
       attributes: [
         {
-          name: "前端语言",
-          value: "uniapp"
-        },
-        {
-          name: "后端语言",
-          value: "你想要的都有"
+          name: "可获取积分",
+          value: "2积分"
         },
         {
           name: "授权方式",
@@ -61,14 +86,14 @@ const useSubPage = () => {
   const generateBanner = () => {
     return {
       id: utils_localMock.generateRandomNumber(1, 100).toString(),
-      name: "图鸟模板",
+      name: "狮业有承模板",
       image: [
-        "https://resource.tuniaokj.com/images/shop/banner1.jpg",
-        "https://resource.tuniaokj.com/images/shop/banner2.jpg",
-        "https://resource.tuniaokj.com/images/swiper/ad2.jpg",
-        "https://resource.tuniaokj.com/images/swiper/ad3.jpg",
-        "https://resource.tuniaokj.com/images/swiper/ad4.jpg",
-        "https://resource.tuniaokj.com/images/swiper/ad5.jpg"
+        "/src/assets/shop/baijian.png",
+        "/src/assets/shop/bianlitie.jpg",
+        "/src/assets/shop/bingxiangtie.jpg",
+        "/src/assets/shop/chezaishiping.jpg",
+        "/src/assets/shop/cixiu (1).jpg",
+        "/src/assets/shop/cixiu (2).jpg"
       ][utils_localMock.generateRandomNumber(0, 5)]
     };
   };

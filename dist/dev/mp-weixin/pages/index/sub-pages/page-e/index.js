@@ -130,7 +130,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         E: `${common_vendor.unref(navBarInfo).height + 12}px`,
         F: common_vendor.p({
           fixed: false,
-          content: "图鸟科技 提供技术支持"
+          content: "狮业有承科技 提供技术支持"
         })
       });
     };

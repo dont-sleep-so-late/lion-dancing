@@ -87,7 +87,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           });
         }),
         h: common_vendor.p({
-          title: "图鸟开源项目",
+          title: "狮业有承开源项目",
           ["sub-title"]: true,
           ["operation-title"]: ""
         }),

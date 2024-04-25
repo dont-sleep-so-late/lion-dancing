@@ -1,7 +1,6 @@
 {
   "navigationBarTitleText": "合作共赢",
   "usingComponents": {
-    "tn-slide-show": "../../node-modules/tnuiv3p-tn-slideshow/index",
-    "tn-suspend-button": "../../node-modules/tnuiv3p-tn-suspend-button/index"
+    "video": "../../components/video/video"
   }
 }

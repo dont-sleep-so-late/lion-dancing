@@ -21,9 +21,9 @@ export const useSubPage = () => {
       uni.hideLoading()
       userInfo.value = {
         uid: generateRandomNumber(100000, 999999).toString(),
-        nickname: '不许凶我吖',
+        nickname: '你别睡这么晚',
         username: '',
-        avatar: 'https://resource.tuniaokj.com/images/avatar/xiong.jpg',
+        avatar: 'https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/shuzhibaijian%20(3).jpg',
         sex: 0,
         phone: '',
         desc: '',

@@ -6,7 +6,7 @@ const useTopicCommunity = () => {
   const instance = common_vendor.getCurrentInstance();
   const communitySummary = common_vendor.ref({
     title: "话题社区",
-    desc: "来自图鸟内部成员的烂漫，在这里发现创意",
+    desc: "来自狮业有承内部成员的烂漫，在这里发现创意",
     image: "https://resource.tuniaokj.com/images/logo/logo.jpg"
   });
   const topicsData = common_vendor.ref([]);

@@ -110,25 +110,25 @@ export const useTuniaoEcology = () => {
       image: '',
     },
   ])
-  // 图鸟项目
+  // 狮业有承项目
   const tuniaoProjectData = ref<FriendLink[]>([
     {
       id: '1',
       title: '使用文档',
       image: 'https://resource.tuniaokj.com/images/logo/tuniao.jpg',
-      desc: '图鸟UI使用文档, 一文读懂图鸟UI',
+      desc: '狮业有承UI使用文档, 一文读懂狮业有承UI',
     },
     {
       id: '2',
       title: '素材社区',
       image: 'https://resource.tuniaokj.com/images/logo/tuniao.jpg',
-      desc: '图鸟素材均在此可以找到',
+      desc: '狮业有承素材均在此可以找到',
     },
     {
       id: '3',
-      title: '图鸟UI',
+      title: '狮业有承UI',
       image: 'https://resource.tuniaokj.com/images/logo/tuniao.jpg',
-      desc: '图鸟UI项目地址',
+      desc: '狮业有承UI项目地址',
     },
   ])
 

@@ -9,7 +9,7 @@ export const useBusinessProcessDetail = () => {
     data: [
       {
         title: '前端开发',
-        data: ['基于图鸟UI进行开发，适配APP、微信小程序、H5的Uniapp应用'],
+        data: ['基于狮业有承UI进行开发，适配APP、微信小程序、H5的Uniapp应用'],
       },
       {
         title: '写在前面',

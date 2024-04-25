@@ -3,8 +3,8 @@ const common_vendor = require("../../../common/vendor.js");
 const utils_localMock = require("../../../utils/local-mock.js");
 const useCompanyAlbum = () => {
   const albumInfo = common_vendor.ref({
-    title: "图鸟随手拍",
-    desc: "图鸟_凶姐 & 写真集"
+    title: "精选图片",
+    desc: "醒狮表演 & 志愿瞬间 & 课程培训 & 故事记录"
   });
   const albumList = common_vendor.ref([]);
   const generateAlbumData = () => {

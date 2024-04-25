@@ -19,7 +19,7 @@ export const generateRandomNickname = () => {
     '中中',
     '小中',
   ]
-  return `图鸟-${nicknames[Math.floor(Math.random() * nicknames.length)]}`
+  return `狮业有承-${nicknames[Math.floor(Math.random() * nicknames.length)]}`
 }
 
 /**

@@ -6,36 +6,37 @@ const types_color = require("../../../../../types/color.js");
 const useSubPage = () => {
   const instance = common_vendor.getCurrentInstance();
   const swiperData = common_vendor.ref([
-    "/src/static/bg/1713878345680.jpg",
-    "/src/static/bg/1713878406472.jpg",
-    "/src/static/bg/1713878412366.jpg",
-    "/src/static/bg/1713929237490.jpg"
+    "/src/assets/bg/1713878345680.jpg",
+    "/src/assets/bg/1713878406472.jpg",
+    "/src/assets/bg/1713878412366.jpg",
+    "/src/assets/bg/1713929237490.jpg"
   ]);
   const hotCategoryData = common_vendor.ref([
     {
       id: "1",
-      name: "品牌介绍",
-      icon: "cute",
+      name: "精选图片",
+      icon: "image",
       backgroundColor: {
         type: types_color.ColorType.select,
-        value: "#3c7efe"
+        value: "#82B2FF"
       },
-      url: "/home-page/brand-introduction/index"
+      url: "/home-page/company-album/index"
+      // url: '/home-page/brand-introduction/index',
     },
     {
       id: "2",
-      name: "合作共赢",
-      icon: "cute",
+      name: "视频专区",
+      icon: "video-square",
       backgroundColor: {
         type: types_color.ColorType.select,
-        value: "#2be9bb"
+        value: "#24BA97"
       },
       url: "/home-page/win-win/index"
     },
     {
       id: "3",
-      name: "社区话题",
-      icon: "cute",
+      name: "新闻中心",
+      icon: "reply",
       backgroundColor: {
         type: types_color.ColorType.select,
         value: "#e93c32"
@@ -44,27 +45,26 @@ const useSubPage = () => {
     },
     {
       id: "4",
-      name: "开源生态",
-      icon: "cute",
+      name: "地图导航",
+      icon: "map",
       backgroundColor: {
         type: types_color.ColorType.select,
-        value: "#ffa929"
+        value: "#CC5A36"
       },
       url: "/home-page/tuniao-ecology/index"
     }
   ]);
   const noticeData = common_vendor.ref([
-    "图鸟官网全新上线，欢迎大家前来访问",
-    "图鸟官网全新上线，欢迎大家前来访问",
-    "图鸟官网全新上线，欢迎大家前来访问"
+    "欢迎来到狮业有承小程序，祝你有一段美好的旅程!",
+    "狮业有承，事业有成！"
   ]);
   const adCapsuleData = common_vendor.ref(
     "https://resource.tuniaokj.com/images/swiper/capsule1.png"
   );
   const hotCaseData = common_vendor.ref([
-    "https://resource.tuniaokj.com/images/blogger/content_1.jpeg",
-    "https://resource.tuniaokj.com/images/blogger/onepiece-1.jpg",
-    "https://resource.tuniaokj.com/images/blogger/onepiece-2.jpg"
+    "/src/assets/bg/微信图片_20240424155803.jpg",
+    "/src/assets/bg/微信图片_20240424160105.jpg",
+    "/src/assets/bg/微信图片_20240424160112.jpg"
   ]);
   const {
     triggerElementId,

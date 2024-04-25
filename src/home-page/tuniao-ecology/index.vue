@@ -84,9 +84,9 @@ const { swiperData, groupFriendsData, friendLinkData, tuniaoProjectData } =
         </view>
       </view>
     </view>
-    <!-- 图鸟开源项目 -->
+    <!-- 狮业有承开源项目 -->
     <view class="tuniao-project">
-      <Title title="图鸟开源项目" sub-title operation-title="" />
+      <Title title="狮业有承开源项目" sub-title operation-title="" />
       <view class="tuniao-project-list">
         <view
           v-for="(item, index) in tuniaoProjectData"

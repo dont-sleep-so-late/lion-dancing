@@ -22,19 +22,25 @@
         {
           "path": "win-win/index",
           "style": {
-            "navigationBarTitleText": "合作共赢"
+            "navigationBarTitleText": "视频专区"
+          }
+        },
+        {
+          "path": "service-center/index",
+          "style": {
+            "navigationBarTitleText": "服务中心"
           }
         },
         {
           "path": "topic-community/index",
           "style": {
-            "navigationBarTitleText": "话题社区"
+            "navigationBarTitleText": "新闻中心"
           }
         },
         {
           "path": "tuniao-ecology/index",
           "style": {
-            "navigationBarTitleText": "图鸟生态"
+            "navigationBarTitleText": "狮业有承生态"
           }
         },
         {
@@ -102,7 +108,7 @@
       "pages": [{
         "path": "about/index",
         "style": {
-          "navigationBarTitleText": "关于图鸟"
+          "navigationBarTitleText": "关于狮业有承"
         }
       }]
     },
@@ -141,7 +147,7 @@
   "globalStyle": {
     "navigationStyle": "custom",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "图鸟官网",
+    "navigationBarTitleText": "狮业有承",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   }

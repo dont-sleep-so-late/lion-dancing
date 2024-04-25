@@ -160,7 +160,8 @@
                 <TnIcon name="image-fill" />
               </view>
             </view>
-            <view class="content-item tn-bg-image tn-shadow-blur tn-gradient-bg__purple">
+            <view class="content-item tn-bg-image tn-shadow-blur tn-gradient-bg__purple"
+              @tap.stop="tnNavPage('/home-page/win-win/index')">
               <view class="left">
                 <view class="title">宣传短片</view>
                 <view class="show-more">

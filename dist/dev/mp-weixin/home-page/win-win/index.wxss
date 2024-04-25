@@ -1,8 +1,16 @@
-.win-win-page.data-v-a5bf2696 {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+.hot-case-container.data-v-a5bf2696 {
+  margin-top: 80rpx;
 }
-.win-win-page.data-v-a5bf2696 .tn-suspend-button {
-  z-index: 100;
+.content-wrapper.data-v-a5bf2696 {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 340rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.content-wrapper.data-v-a5bf2696::before {
+  z-index: -1;
+}
+.content-wrapper .video.data-v-a5bf2696 {
+  width: 100%;
 }

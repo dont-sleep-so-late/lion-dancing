@@ -1,0 +1,1 @@
+<view class="hot-case-container"><title wx:if="{{a}}" u-i="0ab278da-0" bind:__l="__l" u-p="{{a}}"/><view class="content-wrapper"><video class="video" src="{{b}}" id="video"></video></view></view>

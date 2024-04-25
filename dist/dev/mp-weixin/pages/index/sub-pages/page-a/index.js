@@ -107,7 +107,7 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         }),
         m: common_vendor.unref(adCapsuleData),
         n: common_vendor.p({
-          title: "热门案例"
+          title: "最新资讯"
         }),
         o: `url(${common_vendor.unref(hotCaseData)[0]})`,
         p: `url(${common_vendor.unref(hotCaseData)[1]})`,

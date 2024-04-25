@@ -9,17 +9,17 @@ import {
 import { useScrollTransparentNavbar } from '@/hooks'
 
 interface CommunitySummary {
-  title: string
-  desc: string
-  image: string
+  title : string
+  desc : string
+  image : string
 }
 
 export const useTopicCommunity = () => {
   const instance = getCurrentInstance()
   // 社区概要
   const communitySummary = ref<CommunitySummary>({
-    title: '话题社区',
-    desc: '来自图鸟内部成员的烂漫，在这里发现创意',
+    title: '新闻中心',
+    desc: '来自一线记者的细心采访，在这里发现文化传承',
     image: 'https://resource.tuniaokj.com/images/logo/logo.jpg',
   })
 
@@ -44,8 +44,8 @@ export const useTopicCommunity = () => {
 
       topicsData.value.push({
         id: `${i}`,
-        title: `话题标题-${i}`,
-        desc: '开源可商用组件，助你快速开发炫酷的小程序',
+        title: `舞狮文化传承调研队丨助力醒狮传承，广海学子在路上-${i}`,
+        desc: '中华舞狮有南北之分，而南狮因追求“神似”又被称为“醒狮”。岭南醒狮文化作为国家级非物质文化遗产，凝聚岭南历史的精魂，对其传承就是对岭南文化继承、传播和创新的过程。',
         createTime: 'news',
         author: {
           id: `${i}`,
@@ -73,7 +73,7 @@ export const useTopicCommunity = () => {
   generateTopicsData()
 
   // 顶部导航栏初始化完成事件
-  const navbarInitFinishHandle = (info: NavbarRectInfo) => {
+  const navbarInitFinishHandle = (info : NavbarRectInfo) => {
     updateTargetTriggerValue(info.height)
   }
 

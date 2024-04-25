@@ -1,19 +1,10 @@
 <script lang="ts" setup>
-import TnTabs from '@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs.vue'
-import TnTabsItem from '@tuniao/tnui-vue3-uniapp/components/tabs/src/tabs-item.vue'
+import TnSwiper from '@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper.vue'
 import PageContainer from '../../components/page-container/index.vue'
-import CategoryProductPage from './components/category-product-page/index.vue'
 import { useSubPage } from './composables'
+import ArticleSimpleItem from '@/components/article-simple-item/index.vue'
 
-const {
-  navbarHeight,
-  currentCategoryIndex,
-  categoryList,
-  categoryProductData,
-  navbarInitFinishHandle,
-  navSearchPage,
-  categoryChangeHandle,
-} = useSubPage()
+const { swiperData, newsData, navArticleDetail } = useSubPage()
 </script>
 
 // #ifdef MP-WEIXIN
@@ -28,61 +19,36 @@ export default {
 // #endif
 
 <template>
-  <PageContainer :placeholder-bottom="false">
-    <TnNavbar
-      fixed
-      :bottom-shadow="false"
-      :placeholder="false"
-      frosted
-      back-icon=""
-      back-text=""
-      home-icon=""
-      home-text=""
-      @init-finish="navbarInitFinishHandle"
-    >
-      <view class="navbar">
-        <view class="search-operation" @tap.stop="navSearchPage">
-          <TnIcon name="search-menu-fill" />
-        </view>
-        <view class="category">
-          <TnTabs
-            v-model="currentCategoryIndex"
-            bg-color="transparent"
-            :bottom-shadow="false"
-            :bar="false"
-            :scroll="false"
-            height="auto"
-            active-color="#080808"
-            font-size="34"
-            @change="categoryChangeHandle"
-          >
-            <TnTabsItem
-              v-for="(item, index) in categoryList"
-              :key="index"
-              :title="item.name"
-            />
-          </TnTabs>
-        </view>
-      </view>
-    </TnNavbar>
+  <PageContainer>
+    <!-- 顶部轮播 -->
+    <view class="swiper">
+      <TnSwiper :data="swiperData" loop autoplay>
+        <template #default="{ data }">
+          <view class="swiper-item">
+            <view class="image">
+              <image class="tn-image" :src="data.image" mode="aspectFill" />
+            </view>
+            <view class="title">{{ data.title }}</view>
+            <view class="desc">{{ data.desc }}</view>
+          </view>
+        </template>
+      </TnSwiper>
+    </view>
     <view class="page">
-      <view class="page-container">
-        <scroll-view
-          v-for="(item, index) in categoryProductData"
-          :key="index"
-          class="page-scroll"
-          :class="{
-            active: currentCategoryIndex === index,
-          }"
-          scroll-y
-        >
-          <CategoryProductPage
-            :padding-top="navbarHeight + 15"
-            :banners="item.banners"
-            :products="item.products"
-            :is-load="item.isLoad"
-          />
-        </scroll-view>
+      <view
+        v-for="(item, index) in newsData"
+        :key="index"
+        class="news-item"
+        @tap.stop="navArticleDetail"
+      >
+        <ArticleSimpleItem
+          :title="item.title"
+          :desc="item.desc"
+          :image="item.mainImage"
+          :tag="item.tags[0]"
+          :view-count="item.hotCount"
+          :like-count="item.likeCount"
+        />
       </view>
     </view>
   </PageContainer>

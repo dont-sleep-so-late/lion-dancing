@@ -32,15 +32,15 @@ export const useOrderList = () => {
   }
 
   // 导航栏初始化完毕
-  const navBarInitFinishHandle = (info: NavbarRectInfo) => {
+  const navBarInitFinishHandle = (info : NavbarRectInfo) => {
     navbarHeight.value = info.height
   }
 
   // 生成模拟订单数据
-  const _generateOrder = (status = -1): Order => ({
+  const _generateOrder = (status = -1) : Order => ({
     id: Math.random().toString(36).slice(2),
     orderId: Math.random().toString(36).slice(2),
-    title: '图鸟官方设计 酷炫效果展示让用户眼前一亮的赶脚',
+    title: '狮业有承官方设计 酷炫效果展示让用户眼前一亮的赶脚',
     mainImage:
       'https://resource.tuniaokj.com/images/publicity/publicity-vue2.jpg',
     price: Number.parseFloat((Math.random() * 4000 + 500).toFixed(2)),

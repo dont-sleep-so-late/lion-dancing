@@ -14,9 +14,9 @@ const useIndex = () => {
       activeIcon: "iot-fill"
     },
     {
-      text: "案例",
-      icon: "rocket",
-      activeIcon: "reload-planet-fill"
+      text: "AI数字人导游",
+      icon: "emoji-good",
+      activeIcon: "emoji-good-fill"
     },
     {
       text: "资讯",
@@ -24,7 +24,7 @@ const useIndex = () => {
       activeIcon: "topics-fill"
     },
     {
-      text: "图鸟",
+      text: "狮业有承",
       icon: "my-circle",
       activeIcon: "my-circle-fill"
     }

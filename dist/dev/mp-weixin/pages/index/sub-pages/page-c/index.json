@@ -1,9 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "tn-swiper": "../../../../node-modules/@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper",
-    "tn-cool-icon": "../../../../node-modules/tnuiv3p-tn-cool-icon/index",
-    "page-container": "../../components/page-container/index",
-    "cool-title": "../../../../components/cool-title/index"
+    "page-container": "../../components/page-container/index"
   }
 }

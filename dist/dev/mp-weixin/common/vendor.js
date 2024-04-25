@@ -7684,7 +7684,7 @@ const useComponentSafeAreaInsetBottomProp = buildProp({
 });
 const iconProps = buildProps({
   /**
-   * @description 图标名称，支持图鸟内置图标和图片地址(只支持绝对路径)
+   * @description 图标名称，支持狮业有承内置图标和图片地址(只支持绝对路径)
    */
   name: {
     type: iconPropType,
@@ -7699,7 +7699,7 @@ const iconProps = buildProps({
     default: ""
   },
   /**
-   * @description 图标颜色, 以tn开头则使用图鸟内置的颜色
+   * @description 图标颜色, 以tn开头则使用狮业有承内置的颜色
    */
   color: String,
   /**
@@ -8191,11 +8191,11 @@ const buttonProps = buildProps({
     type: [String, Number]
   },
   /**
-   * @description 背景颜色，以tn开头则使用图鸟内置的颜色
+   * @description 背景颜色，以tn开头则使用狮业有承内置的颜色
    */
   bgColor: String,
   /**
-   * @description 文字颜色，以tn开头则使用图鸟内置的颜色
+   * @description 文字颜色，以tn开头则使用狮业有承内置的颜色
    */
   textColor: String,
   /**
@@ -8207,7 +8207,7 @@ const buttonProps = buildProps({
    */
   plain: Boolean,
   /**
-   * @description 边框颜色，以tn开头则使用图鸟内置的颜色
+   * @description 边框颜色，以tn开头则使用狮业有承内置的颜色
    */
   borderColor: String,
   /**
@@ -8219,7 +8219,7 @@ const buttonProps = buildProps({
    */
   shadow: Boolean,
   /**
-   * @description 阴影颜色，以tn开头则使用图鸟内置的颜色
+   * @description 阴影颜色，以tn开头则使用狮业有承内置的颜色
    */
   shadowColor: String,
   /**
@@ -9108,11 +9108,11 @@ const searchBoxProps = buildProps({
    */
   size: useComponentSizeProp,
   /**
-   * @description 搜索框文字的颜色，以tn开头使用图鸟的颜色
+   * @description 搜索框文字的颜色，以tn开头使用狮业有承的颜色
    */
   textColor: String,
   /**
-   * @description 搜索框占位文字颜色，以tn开头使用图鸟的颜色
+   * @description 搜索框占位文字颜色，以tn开头使用狮业有承的颜色
    */
   placeholderColor: String,
   /**
@@ -9164,11 +9164,11 @@ const searchBoxProps = buildProps({
     default: "搜 索"
   },
   /**
-   * @description 搜索按钮字体颜色，以tn开头使用图鸟的颜色
+   * @description 搜索按钮字体颜色，以tn开头使用狮业有承的颜色
    */
   searchButtonTextColor: String,
   /**
-   * @description 搜索按钮背景颜色，以tn开头使用图鸟的颜色
+   * @description 搜索按钮背景颜色，以tn开头使用狮业有承的颜色
    */
   searchButtonBgColor: String,
   /**
@@ -9470,15 +9470,15 @@ const swiperProps = buildProps({
     default: "dot"
   },
   /**
-   * @description 指示器颜色，以tn开头使用图鸟内置的颜色
+   * @description 指示器颜色，以tn开头使用狮业有承内置的颜色
    */
   indicatorBgColor: String,
   /**
-   * @description 指示器激活时的颜色，以tn开头使用图鸟内置的颜色
+   * @description 指示器激活时的颜色，以tn开头使用狮业有承内置的颜色
    */
   indicatorActiveBgColor: String,
   /**
-   * @description 指示器文本颜色，以tn开头使用图鸟内置的颜色
+   * @description 指示器文本颜色，以tn开头使用狮业有承内置的颜色
    */
   indicatorTextColor: String
 });
@@ -10363,300 +10363,6 @@ const usePopupCustomStyle = (props) => {
     popupContentStyle
   };
 };
-const slideshowProps = buildProps({
-  /**
-   * @description 幻灯片图片数据
-   */
-  data: {
-    type: definePropType(Array),
-    required: true,
-    default: () => []
-  },
-  /**
-   * @description 幻灯片高度, 默认单位rpx
-   */
-  height: {
-    type: String,
-    default: "100%"
-  },
-  /**
-   * @description 幻灯片宽度, 默认单位rpx
-   */
-  width: {
-    type: String,
-    default: "100%"
-  },
-  /**
-   * @description 幻灯片间隔时间, 单位ms
-   */
-  interval: {
-    type: Number,
-    default: 4e3
-  }
-});
-const slideshowEmits = {
-  /**
-   * @description 幻灯片切换事件
-   */
-  change: (index2) => isNumber(index2),
-  /**
-   * @description 幻灯片点击事件
-   */
-  click: (index2) => isNumber(index2)
-};
-const useSlideshowCustomStyle = (props, imageCount, activeIndex) => {
-  const ns = useNamespace("slideshow");
-  const containerClass = computed(() => {
-    const cls = [ns.b()];
-    return cls.join(" ");
-  });
-  const containerStyle = computed(() => {
-    const style = {};
-    if (props.width) {
-      style.width = formatDomSizeValue(props.width);
-    }
-    if (props.height) {
-      style.height = formatDomSizeValue(props.height);
-    }
-    return style;
-  });
-  const imageClass = computed(() => {
-    return (index2) => {
-      const cls = [ns.e("image")];
-      if (activeIndex.value - 1 < 0 ? index2 === imageCount.value - 1 : index2 === activeIndex.value - 1)
-        cls.push(ns.em("image", "fade-out"));
-      if (index2 === activeIndex.value)
-        cls.push(ns.em("image", "fade-in"));
-      return cls.join(" ");
-    };
-  });
-  const imageStyle = computed(() => {
-    return (index2) => {
-      const style = {};
-      style.transitionDuration = `${props.interval || 5e3}ms`;
-      style.zIndex = imageCount.value - index2;
-      return style;
-    };
-  });
-  return {
-    ns,
-    containerClass,
-    containerStyle,
-    imageClass,
-    imageStyle
-  };
-};
-const useSlideShow = (props, emits) => {
-  let fadeIntervalTimer = null;
-  const imageCount = computed(() => {
-    var _a2;
-    return ((_a2 = props == null ? void 0 : props.data) == null ? void 0 : _a2.length) || 0;
-  });
-  const currentActiveIndex = ref(0);
-  const clickHandle = (index2) => {
-    emits("click", index2);
-  };
-  const _next = () => {
-    currentActiveIndex.value = (currentActiveIndex.value + 1) % imageCount.value;
-    emits("change", currentActiveIndex.value);
-  };
-  const _closeFadeInterval = () => {
-    if (fadeIntervalTimer) {
-      clearInterval(fadeIntervalTimer);
-      fadeIntervalTimer = null;
-    }
-  };
-  watch(
-    () => props.data,
-    () => {
-      if (!props.data || props.data.length === 0)
-        return;
-      _closeFadeInterval();
-      setTimeout(() => {
-        _next();
-      }, 0);
-      fadeIntervalTimer = setInterval(() => {
-        _next();
-      }, props.interval || 5e3);
-    },
-    {
-      immediate: true,
-      deep: true
-    }
-  );
-  return {
-    imageCount,
-    currentActiveIndex,
-    clickHandle
-  };
-};
-const suspendButtonShape = ["circle", "square"];
-const suspendButtonProps = buildProps({
-  /**
-   * @description 按钮显示的图标
-   */
-  icon: String,
-  /**
-   * @description 按钮距离顶部的位置，单位rpx
-   */
-  top: {
-    type: [String, Number],
-    default: "80%"
-  },
-  /**
-   * @description 按钮距离右侧的位置，单位rpx
-   */
-  right: {
-    type: [String, Number],
-    default: "5%"
-  },
-  /**
-   * @description 按钮背景颜色, 以tn开头使用图鸟内置的颜色
-   */
-  bgColor: {
-    type: String,
-    default: "tn-type-primary"
-  },
-  /**
-   * @description 按钮文字颜色, 以tn开头使用图鸟内置的颜色
-   */
-  textColor: {
-    type: String,
-    default: "tn-color-white"
-  },
-  /**
-   * @description 按钮尺寸, 内置尺寸sm、lg、xl, 也可以传入指定尺寸的数值，默认单位为rpx
-   */
-  size: String,
-  /**
-   * @description 按钮形状
-   */
-  shape: {
-    type: String,
-    values: suspendButtonShape,
-    default: "circle"
-  },
-  /**
-   * @description 透明度
-   */
-  opacity: {
-    type: Number,
-    default: 0.9
-  },
-  /**
-   * @description 是否显示阴影
-   */
-  shadow: {
-    type: Boolean,
-    default: true
-  },
-  /**
-   * @description 是否有漂浮动画
-   */
-  float: {
-    type: Boolean,
-    default: true
-  },
-  /**
-   * @description 是否固定位置
-   */
-  fixed: {
-    type: Boolean,
-    default: true
-  }
-});
-const suspendButtonEmits = {
-  /**
-   * @description 点击按钮时触发
-   */
-  click: () => true
-};
-const useSuspendButtonCustomStyle = (props) => {
-  const ns = useNamespace("suspend-button");
-  const [bgColorClass, bgColorStyle] = useComponentColor(
-    toRef(props, "bgColor"),
-    "bg"
-  );
-  const [textColorClass, textColorStyle] = useComponentColor(
-    toRef(props, "textColor"),
-    "text"
-  );
-  const { sizeType } = useComponentSize(props.size);
-  const buttonClass = computed(() => {
-    const cls = [ns.b()];
-    if (bgColorClass.value) {
-      cls.push(bgColorClass.value);
-    }
-    if (textColorClass.value) {
-      cls.push(textColorClass.value);
-    }
-    if (props.shape) {
-      cls.push(ns.m(props.shape));
-    }
-    if (props.size && sizeType.value === "inner") {
-      cls.push(ns.m(props.size));
-    }
-    if (props.float) {
-      cls.push(ns.m("float"));
-    }
-    if (props.fixed) {
-      cls.push(ns.m("fixed"));
-    }
-    if (props.shadow) {
-      cls.push("tn-shadow");
-    }
-    return cls.join(" ");
-  });
-  const buttonStyle = computed(() => {
-    const style = {};
-    if (!bgColorClass.value) {
-      style.backgroundColor = bgColorStyle.value || "var(--tn-color-primary)";
-    }
-    if (textColorStyle.value) {
-      style.color = textColorStyle.value;
-    } else if (!bgColorClass.value && !textColorClass.value) {
-      style.color = "var(--tn-color-white)";
-    }
-    if (props.size && sizeType.value === "custom") {
-      style.width = style.height = formatDomSizeValue(props.size);
-    }
-    if ((props == null ? void 0 : props.opacity) !== void 0) {
-      style.opacity = props.opacity;
-    }
-    if ((props == null ? void 0 : props.top) !== void 0) {
-      style.top = formatDomSizeValue(props.top);
-    }
-    if ((props == null ? void 0 : props.right) !== void 0) {
-      style.right = formatDomSizeValue(props.right);
-    }
-    return style;
-  });
-  const iconClass = computed(() => {
-    const cls = [ns.e("icon")];
-    return cls.join(" ");
-  });
-  const iconStyle = computed(() => {
-    const style = {};
-    if (props.size && sizeType.value === "custom") {
-      style.fontSize = `calc(${formatDomSizeValue(props.size)} * 0.7)`;
-    }
-    return style;
-  });
-  return {
-    buttonClass,
-    buttonStyle,
-    iconClass,
-    iconStyle
-  };
-};
-const useSuspendButton = (emits) => {
-  const clickHandle = () => {
-    emits("click");
-  };
-  return {
-    clickHandle
-  };
-};
 const graphicCardProps = buildProps({
   /**
    * @description 头像地址
@@ -10687,11 +10393,11 @@ const graphicCardProps = buildProps({
     default: () => []
   },
   /**
-   * @description 标签背景颜色，以tn开头使用图鸟内置的颜色
+   * @description 标签背景颜色，以tn开头使用狮业有承内置的颜色
    */
   tagBgColor: String,
   /**
-   * @description 标签文字颜色，以tn开头使用图鸟内置的颜色
+   * @description 标签文字颜色，以tn开头使用狮业有承内置的颜色
    */
   tagTextColor: String,
   /**
@@ -11094,11 +10800,11 @@ const coolIconProps = buildProps({
    */
   name: String,
   /**
-   * @description 图标颜色，以tn开头使用图鸟内置的颜色，如果是gradient开头则使用图鸟内置的渐变色
+   * @description 图标颜色，以tn开头使用狮业有承内置的颜色，如果是gradient开头则使用狮业有承内置的渐变色
    */
   color: String,
   /**
-   * @description 背景颜色，以tn开头使用图鸟内置的颜色
+   * @description 背景颜色，以tn开头使用狮业有承内置的颜色
    */
   bgColor: String,
   /**
@@ -11629,6 +11335,173 @@ const avatarGroupEmits = {
    */
   click: (index2) => typeof index2 === "number"
 };
+const suspendButtonShape = ["circle", "square"];
+const suspendButtonProps = buildProps({
+  /**
+   * @description 按钮显示的图标
+   */
+  icon: String,
+  /**
+   * @description 按钮距离顶部的位置，单位rpx
+   */
+  top: {
+    type: [String, Number],
+    default: "80%"
+  },
+  /**
+   * @description 按钮距离右侧的位置，单位rpx
+   */
+  right: {
+    type: [String, Number],
+    default: "5%"
+  },
+  /**
+   * @description 按钮背景颜色, 以tn开头使用狮业有承内置的颜色
+   */
+  bgColor: {
+    type: String,
+    default: "tn-type-primary"
+  },
+  /**
+   * @description 按钮文字颜色, 以tn开头使用狮业有承内置的颜色
+   */
+  textColor: {
+    type: String,
+    default: "tn-color-white"
+  },
+  /**
+   * @description 按钮尺寸, 内置尺寸sm、lg、xl, 也可以传入指定尺寸的数值，默认单位为rpx
+   */
+  size: String,
+  /**
+   * @description 按钮形状
+   */
+  shape: {
+    type: String,
+    values: suspendButtonShape,
+    default: "circle"
+  },
+  /**
+   * @description 透明度
+   */
+  opacity: {
+    type: Number,
+    default: 0.9
+  },
+  /**
+   * @description 是否显示阴影
+   */
+  shadow: {
+    type: Boolean,
+    default: true
+  },
+  /**
+   * @description 是否有漂浮动画
+   */
+  float: {
+    type: Boolean,
+    default: true
+  },
+  /**
+   * @description 是否固定位置
+   */
+  fixed: {
+    type: Boolean,
+    default: true
+  }
+});
+const suspendButtonEmits = {
+  /**
+   * @description 点击按钮时触发
+   */
+  click: () => true
+};
+const useSuspendButtonCustomStyle = (props) => {
+  const ns = useNamespace("suspend-button");
+  const [bgColorClass, bgColorStyle] = useComponentColor(
+    toRef(props, "bgColor"),
+    "bg"
+  );
+  const [textColorClass, textColorStyle] = useComponentColor(
+    toRef(props, "textColor"),
+    "text"
+  );
+  const { sizeType } = useComponentSize(props.size);
+  const buttonClass = computed(() => {
+    const cls = [ns.b()];
+    if (bgColorClass.value) {
+      cls.push(bgColorClass.value);
+    }
+    if (textColorClass.value) {
+      cls.push(textColorClass.value);
+    }
+    if (props.shape) {
+      cls.push(ns.m(props.shape));
+    }
+    if (props.size && sizeType.value === "inner") {
+      cls.push(ns.m(props.size));
+    }
+    if (props.float) {
+      cls.push(ns.m("float"));
+    }
+    if (props.fixed) {
+      cls.push(ns.m("fixed"));
+    }
+    if (props.shadow) {
+      cls.push("tn-shadow");
+    }
+    return cls.join(" ");
+  });
+  const buttonStyle = computed(() => {
+    const style = {};
+    if (!bgColorClass.value) {
+      style.backgroundColor = bgColorStyle.value || "var(--tn-color-primary)";
+    }
+    if (textColorStyle.value) {
+      style.color = textColorStyle.value;
+    } else if (!bgColorClass.value && !textColorClass.value) {
+      style.color = "var(--tn-color-white)";
+    }
+    if (props.size && sizeType.value === "custom") {
+      style.width = style.height = formatDomSizeValue(props.size);
+    }
+    if ((props == null ? void 0 : props.opacity) !== void 0) {
+      style.opacity = props.opacity;
+    }
+    if ((props == null ? void 0 : props.top) !== void 0) {
+      style.top = formatDomSizeValue(props.top);
+    }
+    if ((props == null ? void 0 : props.right) !== void 0) {
+      style.right = formatDomSizeValue(props.right);
+    }
+    return style;
+  });
+  const iconClass = computed(() => {
+    const cls = [ns.e("icon")];
+    return cls.join(" ");
+  });
+  const iconStyle = computed(() => {
+    const style = {};
+    if (props.size && sizeType.value === "custom") {
+      style.fontSize = `calc(${formatDomSizeValue(props.size)} * 0.7)`;
+    }
+    return style;
+  });
+  return {
+    buttonClass,
+    buttonStyle,
+    iconClass,
+    iconStyle
+  };
+};
+const useSuspendButton = (emits) => {
+  const clickHandle = () => {
+    emits("click");
+  };
+  return {
+    clickHandle
+  };
+};
 const pickerBaseProps = buildProps({
   /**
    * @description 显示取消按钮
@@ -11645,7 +11518,7 @@ const pickerBaseProps = buildProps({
     default: "取 消"
   },
   /**
-   * @description 取消按钮的字体颜色，支持图鸟内置的字体颜色
+   * @description 取消按钮的字体颜色，支持狮业有承内置的字体颜色
    */
   cancelColor: String,
   /**
@@ -11663,7 +11536,7 @@ const pickerBaseProps = buildProps({
     default: "确 定"
   },
   /**
-   * @description 确定按钮的字体颜色，支持图鸟内置的字体颜色
+   * @description 确定按钮的字体颜色，支持狮业有承内置的字体颜色
    */
   confirmColor: String,
   /**
@@ -13161,14 +13034,14 @@ const updateUserInfoPopupProps = buildProps({
     default: "保 存"
   },
   /**
-   * @description 弹框按钮背景颜色，以tn开头使用图鸟内置的颜色
+   * @description 弹框按钮背景颜色，以tn开头使用狮业有承内置的颜色
    */
   confirmBgColor: {
     type: String,
     default: "tn-type-primary"
   },
   /**
-   * @description 弹框按钮文字颜色，以tn开头使用图鸟内置的颜色
+   * @description 弹框按钮文字颜色，以tn开头使用狮业有承内置的颜色
    */
   confirmTextColor: {
     type: String,
@@ -13269,11 +13142,11 @@ const useUpdateUserInfoPopup = (props, emits) => {
 };
 const tabsBaseProps = buildProps({
   /**
-   * @description 默认颜色，以tn开头时使用图鸟内置的颜色
+   * @description 默认颜色，以tn开头时使用狮业有承内置的颜色
    */
   color: String,
   /**
-   * @description 选中颜色，以tn开头时使用图鸟内置的颜色
+   * @description 选中颜色，以tn开头时使用狮业有承内置的颜色
    */
   activeColor: String,
   /**
@@ -13309,11 +13182,11 @@ const tabsProps = buildProps({
     default: "40rpx"
   },
   /**
-   * @description 背景颜色，以tn开头时使用图鸟内置的颜色
+   * @description 背景颜色，以tn开头时使用狮业有承内置的颜色
    */
   bgColor: String,
   /**
-   * @description bar滑块颜色，以tn开头时使用图鸟内置的颜色
+   * @description bar滑块颜色，以tn开头时使用狮业有承内置的颜色
    */
   barColor: String,
   /**
@@ -13792,7 +13665,7 @@ const loadingProps = buildProps({
     default: "primary"
   },
   /**
-   * @description 颜色，以tn开头则使用图鸟内置的颜色
+   * @description 颜色，以tn开头则使用狮业有承内置的颜色
    */
   color: String,
   /**
@@ -13888,11 +13761,11 @@ const badgeProps = buildProps({
     default: "primary"
   },
   /**
-   * @description 徽标背景颜色, 以tn开头则使用图鸟内置的颜色
+   * @description 徽标背景颜色, 以tn开头则使用狮业有承内置的颜色
    */
   bgColor: String,
   /**
-   * @description 徽标文字颜色, 以tn开头则使用图鸟内置的颜色
+   * @description 徽标文字颜色, 以tn开头则使用狮业有承内置的颜色
    */
   textColor: String,
   /**
@@ -14072,11 +13945,11 @@ const noticeBarProps = buildProps({
     default: () => []
   },
   /**
-   * @description 背景颜色，以tn开头则使用图鸟内置的颜色
+   * @description 背景颜色，以tn开头则使用狮业有承内置的颜色
    */
   bgColor: String,
   /**
-   * @description 文字颜色，以tn开头则使用图鸟内置的颜色
+   * @description 文字颜色，以tn开头则使用狮业有承内置的颜色
    */
   textColor: String,
   /**
@@ -14088,7 +13961,7 @@ const noticeBarProps = buildProps({
    */
   leftIcon: String,
   /**
-   * @description 左图标颜色，以tn开头则使用图鸟内置的颜色
+   * @description 左图标颜色，以tn开头则使用狮业有承内置的颜色
    */
   leftIconColor: String,
   /**
@@ -14100,7 +13973,7 @@ const noticeBarProps = buildProps({
    */
   rightIcon: String,
   /**
-   * @description 右图标颜色，以tn开头则使用图鸟内置的颜色
+   * @description 右图标颜色，以tn开头则使用狮业有承内置的颜色
    */
   rightIconColor: String,
   /**
@@ -14409,7 +14282,7 @@ const footerProps = buildProps({
     default: () => []
   },
   /**
-   * @description 内容字体颜色，以tn开头使用图鸟内置的颜色
+   * @description 内容字体颜色，以tn开头使用狮业有承内置的颜色
    */
   textColor: String,
   /**
@@ -14417,7 +14290,7 @@ const footerProps = buildProps({
    */
   size: String,
   /**
-   * @description 导航信息字体颜色，以tn开头使用图鸟内置的颜色
+   * @description 导航信息字体颜色，以tn开头使用狮业有承内置的颜色
    */
   navigatorTextColor: String,
   /**
@@ -14668,7 +14541,7 @@ const emptyProps = buildProps({
     required: true
   },
   /**
-   * @description 内容颜色，以tn开头使用图鸟内置的颜色
+   * @description 内容颜色，以tn开头使用狮业有承内置的颜色
    */
   color: String,
   /**
@@ -14792,8 +14665,6 @@ exports.resolveComponent = resolveComponent;
 exports.s = s;
 exports.searchBoxEmits = searchBoxEmits;
 exports.searchBoxProps = searchBoxProps;
-exports.slideshowEmits = slideshowEmits;
-exports.slideshowProps = slideshowProps;
 exports.sr = sr;
 exports.suspendButtonEmits = suspendButtonEmits;
 exports.suspendButtonProps = suspendButtonProps;
@@ -14858,8 +14729,6 @@ exports.useRowNoticeBar = useRowNoticeBar;
 exports.useSearchBox = useSearchBox;
 exports.useSearchBoxCustomStyle = useSearchBoxCustomStyle;
 exports.useSelectorQuery = useSelectorQuery;
-exports.useSlideShow = useSlideShow;
-exports.useSlideshowCustomStyle = useSlideshowCustomStyle;
 exports.useSlots = useSlots;
 exports.useSuspendButton = useSuspendButton;
 exports.useSuspendButtonCustomStyle = useSuspendButtonCustomStyle;
