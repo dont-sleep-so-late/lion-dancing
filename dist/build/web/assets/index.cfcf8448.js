@@ -1,0 +1,1 @@
+import{aA as e}from"./index-2f3d7a21.js";const d=()=>{const d={},i=e([]);return{children:i,addChild:e=>{d[e.uid]=e,i.value.push(e)},removeChild:e=>{delete d[e],i.value=i.value.filter((d=>d.uid!==e))}}};export{d as u};

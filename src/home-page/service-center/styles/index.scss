@@ -1,115 +1,187 @@
-/* 演示预览 start */
-.demo-preview {
-  position: relative;
-  top: -1rpx;
-  width: 100%;
-  border-top: 1rpx solid transparent;
-  background: url('https://resource.tuniaokj.com/images/index_bg/play1.jpg')
-    no-repeat;
-  background-size: 100% auto;
-
-  .swiper {
-    position: relative;
-    width: 100%;
-    height: 600rpx;
-
-    .swiper-item {
-      height: 100%;
-      transform: translateY(-10rpx) scale(0.65);
-      border-radius: 12rpx;
-      transform-origin: center center;
-      transition: transform 0.5s ease;
-
-      &.active {
-        transform: translateY(-10rpx) scale(0.9);
-      }
-    }
-  }
-}
-/* 演示预览 end */
-
-/* 页面内容 start */
 .page {
   position: relative;
   width: 100%;
 
-  /* 业务分类 start */
-  .business-category {
+  .title {  
+
+  }
+
+  /* 顶部轮播图 start */
+  .top-swiper {
     position: relative;
     width: 100%;
-    padding: 50rpx 30rpx;
-    display: flex;
-    flex-wrap: wrap;
-
-    .business-item {
-      width: calc(100% / 4);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30rpx;
-
-      .name {
-        margin-top: 16rpx;
-        color: var(--tn-color-gray);
-      }
+    height: 380rpx;
+    margin-top:10rpx;
+    .swiper-item {
+      position: relative;
+      width: 100%;
+      height: 100%;
     }
   }
-  /* 业务分类 end */
+  /* 顶部轮播图 end */
 
-  /* 项目案例 start */
-  .case-project {
+  /* 通知 start */
+  .notice-bar {
+    width: 100%;
+    padding: 20rpx 0rpx 0rpx 0rpx;
+  }
+  /* 通知 end */
+
+  .sub-page-container {
     position: relative;
     width: 100%;
-    padding: 0rpx 30rpx;
+    padding: 30rpx 30rpx 0rpx 30rpx;
 
-    .case-list {
+    /* 分类 start */
+    .category-container {
+      position: relative;
+      width: 100%;
+      margin-top:20rpx;
+      display: flex;
+      justify-content: space-between;
+
+      .category-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .item-icon {
+          position: relative;
+          width: 100rpx;
+          height: 100rpx;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 66rpx;
+          color: #fff;
+          z-index: 2;
+
+          &::after {
+            z-index: 1;
+          }
+
+          .icon {
+            line-height: 1;
+            z-index: 2;
+          }
+        }
+
+        .item-name {
+          margin-top: 16rpx;
+          color: var(--tn-color-gray-dark);
+        }
+      }
+    }
+    /* 分类 end */
+
+    /* 广告胶囊 start */
+    .ad-capsule {
+      position: relative;
+      width: 100%;
+      margin-top: 34rpx;
+    }
+    /* 广告胶囊 end */
+
+    /* 热门案例 start */
+    .hot-case-container {
+      position: relative;
+      width: 100%;
       margin-top: 50rpx;
 
-      .case-item {
-        position: relative;
+      .content-wrapper {
+        margin-top: 40rpx;
         width: 100%;
-        height: 420rpx;
-        border-radius: 12rpx;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
+        height: 340rpx;
+        display: flex;
+        justify-content: space-between;
 
-        &::before {
-          z-index: -1;
-        }
-
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
+        .image {
           width: 100%;
           height: 100%;
-          border-radius: inherit;
-          background: linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.3) 0%,
-            rgba(0, 0, 0, 0) 40%,
-            rgba(0, 0, 0, 0) 100%
-          );
-          z-index: 1;
+          border-radius: 12rpx;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+
+          &::before {
+            z-index: -1;
+          }
         }
 
-        & + .case-item {
-          margin-top: 40rpx;
+        .left {
+          width: 60%;
+          height: 100%;
         }
 
-        .title {
-          color: var(--tn-color-white);
-          font-size: 34rpx;
-          position: absolute;
-          left: 30rpx;
-          bottom: 30rpx;
-          z-index: 2;
+        .right {
+          width: calc(100% - 60% - 30rpx);
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .right-item {
+            width: 100%;
+            height: calc(100% / 2 - 15rpx);
+          }
         }
       }
     }
+    /* 热门案例 end */
+
+    /* 关于我们 start */
+    .about {
+      margin-top: 60rpx;
+
+      .content-wrapper {
+        margin-top: 40rpx;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .content-item {
+          position: relative;
+          width: calc(100% / 2 - 15rpx);
+          margin-bottom: 30rpx;
+          border-radius: 12rpx;
+          padding: 40rpx 10rpx 40rpx 34rpx;
+          display: flex;
+          justify-content: space-between;
+          line-height: 1;
+          z-index: 2;
+
+          &::after {
+            z-index: 1;
+          }
+
+          .left {
+            z-index: 2;
+            .title {
+              font-size: 36rpx;
+              color: #fff;
+            }
+            .show-more {
+              margin-top: 32rpx;
+              font-size: 26rpx;
+              color: rgba(255, 255, 255, 0.6);
+              text {
+                margin-right: 8rpx;
+              }
+            }
+          }
+
+          .icon {
+            z-index: 2;
+            font-size: 100rpx;
+            margin-top: -16rpx;
+            color: #fff;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+    /* 关于我们 end */
   }
-  /* 项目案例 end */
 }
-/* 页面内容 end */

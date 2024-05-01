@@ -137,11 +137,30 @@
     {
       "root": "order-page",
       "pages": [{
-        "path": "order-list/index",
-        "style": {
-          "navigationBarTitleText": "订单列表"
+          "path": "order-list/index",
+          "style": {
+            "navigationBarTitleText": "订单列表"
+          }
+        },
+        {
+          "path": "create/create",
+          "style": {
+            "navigationBarTitleText": "填写订单"
+          }
+        },
+        {
+          "path": "detail/detail",
+          "style": {
+            "navigationBarTitleText": "商品详情"
+          }
+        },
+        {
+          "path": "payment/payment",
+          "style": {
+            "navigationBarTitleText": "付款"
+          }
         }
-      }]
+      ]
     }
   ],
   "globalStyle": {

@@ -1,19 +1,20 @@
 <script lang="ts" setup>
-  import { useUniAppSystemRectInfo } from '@tuniao/tnui-vue3-uniapp/hooks'
   import TnSwiper from '@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper.vue'
-  import TnCoolIcon from 'tnuiv3p-tn-cool-icon/index.vue'
-  import PageContainer from '../../pages/index/components/page-container/index.vue'
+  import TnNoticeBar from '@tuniao/tnui-vue3-uniapp/components/notice-bar/src/notice-bar.vue'
+  import PageContainer from './components/page-container/index.vue'
   import { useSubPage } from './composables'
-  import CoolTitle from '@/components/cool-title/index.vue'
-
-  const { navBarInfo } = useUniAppSystemRectInfo()
+  import Title from '@/components/title/index.vue'
+  import Video from '@/components/video/video.vue'
 
   const {
-    demoImages,
-    businessCategoryData,
-    projectCaseData,
-    navBusinessProcessDetail,
-    navCaseDetail,
+    triggerElementId,
+    swiperData,
+    swiperData2,
+    classCategoryData,
+    volunteerCategoryData,
+    noticeData,
+    hotCaseData,
+    tnNavPage,
   } = useSubPage()
 </script>
 
@@ -30,43 +31,78 @@
 
 <template>
   <PageContainer>
-    <!-- 顶部样机演示 -->
-    <view class="demo-preview">
-      <view class="swiper" :style="{ marginTop: `${navBarInfo.height}px` }">
-        <TnSwiper :data="demoImages" previous-margin="120" next-margin="130" loop>
-          <template #default="{ data, active }">
-            <view class="swiper-item" :class="{ active }">
-              <image class="tn-image tn-shadow" :src="data.image" mode="heightFix" />
+    <view class="page">
+      <!-- 顶部区域 -->
+      <TnNavbar fixed bg-color="transparent" :bottom-shadow="false" :placeholder="false" />
+      <!-- 通知 -->
+      <view :id="triggerElementId" class="notice-bar">
+        <TnNoticeBar :data="noticeData" direction="vertical" loop left-icon="sound" />
+      </view>
+      <Title class="title" title="核心课程" />
+      <!-- 顶部轮播图 -->
+      <view class="top-swiper">
+        <TnSwiper :data="swiperData" width="100%" height="100%" indicator loop>
+          <template #default="{ data }">
+            <view class="swiper-item">
+              <image class="tn-image" :src="data" mode="aspectFill" />
             </view>
           </template>
         </TnSwiper>
       </view>
-    </view>
 
-    <view class="page">
-      <!-- 业务分类 -->
-      <view class="business-category">
-        <view v-for="(item, index) in businessCategoryData" :key="index" class="business-item"
-          @tap.stop="navBusinessProcessDetail">
-          <view class="icon">
-            <TnCoolIcon :name="item.icon" :color="item?.iconColor?.value" size="110" />
+
+      <!-- 页面内容 -->
+      <view class="sub-page-container">
+        <!-- 导航分类 -->
+        <view class="category-container">
+          <view v-for="(item, index) in classCategoryData" :key="index" class="category-item"
+            @tap.stop="tnNavPage(item.url!)">
+            <view class="item-icon tn-bg-image tn-shadow-blur"
+              :style="{ backgroundColor: item?.backgroundColor?.value }">
+              <view class="icon">
+                <TnIcon :name="item.icon" />
+              </view>
+            </view>
+            <view class="item-name">
+              {{ item.name }}
+            </view>
           </view>
-          <view class="name">{{ item.name }}</view>
+        </view>
+
+        <Video />
+
+        <!-- 志愿者专区 -->
+        <view :id="triggerElementId" class="notice-bar">
+          <TnNoticeBar :data="noticeData" direction="vertical" loop left-icon="sound" />
+        </view>
+        <Title class="title" title="志愿专区" />
+        <!-- 顶部轮播图 -->
+        <view class="top-swiper">
+          <TnSwiper :data="swiperData2" width="100%" height="100%" indicator loop>
+            <template #default="{ data }">
+              <view class="swiper-item">
+                <image class="tn-image" :src="data" mode="aspectFill" />
+              </view>
+            </template>
+          </TnSwiper>
+        </view>
+        <!-- 导航分类 -->
+        <view class="category-container">
+          <view v-for="(item, index) in volunteerCategoryData" :key="index" class="category-item"
+            @tap.stop="tnNavPage(item.url!)">
+            <view class="item-icon tn-bg-image tn-shadow-blur"
+              :style="{ backgroundColor: item?.backgroundColor?.value }">
+              <view class="icon">
+                <TnIcon :name="item.icon" />
+              </view>
+            </view>
+            <view class="item-name">
+              {{ item.name }}
+            </view>
+          </view>
         </view>
       </view>
 
-      <!-- 项目案例 -->
-      <view class="case-project">
-        <view class="container-title">
-          <CoolTitle title="项 / 目 / 案 / 例" :cool-bg-number="5" />
-        </view>
-        <view class="case-list">
-          <view v-for="(item, index) in projectCaseData" :key="index" class="case-item tn-shadow-blur"
-            :style="{ backgroundImage: `url(${item.mainImage})` }" @tap.stop="navCaseDetail(item.id)">
-            <view class="title">{{ item.title }}</view>
-          </view>
-        </view>
-      </view>
     </view>
   </PageContainer>
 </template>

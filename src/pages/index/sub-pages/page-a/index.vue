@@ -96,7 +96,7 @@
         </view>
 
         <!-- 最新资讯 -->
-        <view class="hot-case-container">
+        <view class="hot-case-container" @tap.stop="tnNavPage('../sub-pages/page-b/index')">
           <Title title="最新资讯" />
           <view class="content-wrapper">
             <view class="left">
