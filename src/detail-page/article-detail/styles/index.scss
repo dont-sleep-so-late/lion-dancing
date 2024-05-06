@@ -20,10 +20,9 @@
   .article-content {
     padding: 30rpx;
     border-bottom: 20rpx solid var(--tn-color-gray-light);
-
     .content {
       margin-top: 30rpx;
-      height: 100vh;
+      min-height: 50vh;
     }
 
     .bottom-container {
