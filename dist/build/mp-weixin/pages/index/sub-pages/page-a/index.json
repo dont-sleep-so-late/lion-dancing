@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tn-swiper": "../../../../node-modules/@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper",
+    "tn-notice-bar": "../../../../node-modules/@tuniao/tnui-vue3-uniapp/components/notice-bar/src/notice-bar",
+    "page-container": "../../components/page-container/index",
+    "title": "../../../../components/title/index"
+  }
+}

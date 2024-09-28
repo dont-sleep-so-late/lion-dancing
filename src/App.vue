@@ -12,7 +12,6 @@
         'url("https://resource.tuniaokj.com/images/vue3-template/template2-website/font/tuniao-xiaowei.ttf")',
       fail: (err) => {
         debugWarn('load-font', `加载字体失败: ${err}`)
-        console.error(err)
       },
     })
   })

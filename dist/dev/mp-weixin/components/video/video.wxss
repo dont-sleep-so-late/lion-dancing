@@ -4,13 +4,13 @@
 .content-wrapper {
   margin-top: 20rpx;
   width: 100%;
-  height: 300rpx;
+  height: 390rpx;
   display: flex;
   justify-content: space-between;
 }
 .content-wrapper::before {
   z-index: -1;
 }
-.content-wrapper .video {
+.content-wrapper iframe {
   width: 100%;
 }

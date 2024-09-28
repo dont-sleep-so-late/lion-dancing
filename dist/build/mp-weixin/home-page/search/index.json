@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "tn-search-box": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/search-box/src/search-box",
+    "title": "../../components/title/index",
+    "article-simple-item": "../../components/article-simple-item/index"
+  }
+}

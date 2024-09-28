@@ -3,5 +3,18 @@
     "projectname": "%E7%8B%AE%E4%B8%9A%E6%9C%89%E6%88%90vue3",
     "setting": {
         "compileHotReLoad": true
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/index/sub/pages/page-a/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
     }
 }

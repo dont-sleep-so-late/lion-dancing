@@ -2,9 +2,9 @@
 const common_vendor = require("../../common/vendor.js");
 const components_video_composables_useVideo = require("./composables/use-video.js");
 if (!Math) {
-  Title();
+  TnTitle();
 }
-const Title = () => "../title/index.js";
+const TnTitle = () => "../../node-modules/@tuniao/tnui-vue3-uniapp/components/title/src/title.js";
 const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
   __name: "video",
   setup(__props) {
@@ -12,7 +12,9 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     return (_ctx, _cache) => {
       return {
         a: common_vendor.p({
-          title: "最新资讯"
+          title: "醒狮开泰：少年舞狮文化传承",
+          mode: "vLine",
+          ["assist-color"]: "tn-red"
         }),
         b: common_vendor.unref(video)
       };

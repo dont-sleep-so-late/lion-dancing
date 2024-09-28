@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "狮业有成",
+  "usingComponents": {
+    "tn-tabbar": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar",
+    "tn-tabbar-item": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/tabbar/src/tabbar-item",
+    "page-a": "./sub-pages/page-a/index",
+    "page-b": "./sub-pages/page-b/index",
+    "page-c": "./sub-pages/page-c/index",
+    "page-d": "./sub-pages/page-d/index",
+    "page-e": "./sub-pages/page-e/index"
+  }
+}

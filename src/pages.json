@@ -137,13 +137,11 @@
     {
       "root": "order-page",
       "pages": [{
-          "path": "order-list/index",
-          "style": {
-            "navigationBarTitleText": "订单列表"
-          }
-        },
-
-      ]
+        "path": "order-list/index",
+        "style": {
+          "navigationBarTitleText": "订单列表"
+        }
+      }]
     }
   ],
   "globalStyle": {

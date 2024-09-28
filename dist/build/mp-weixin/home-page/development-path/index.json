@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "发展历程",
+  "usingComponents": {
+    "tn-time-line": "../../node-modules/tnuiv3p-tn-time-line/time-line",
+    "tn-time-line-item": "../../node-modules/tnuiv3p-tn-time-line/time-line-item",
+    "tn-time-line-data": "../../node-modules/tnuiv3p-tn-time-line/time-line-data"
+  }
+}

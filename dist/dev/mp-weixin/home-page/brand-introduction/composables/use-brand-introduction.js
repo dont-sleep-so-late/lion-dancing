@@ -47,9 +47,9 @@ const useBrandIntroduction = () => {
   ]);
   const brandIntroductionData = common_vendor.ref("");
   const authorInfo = common_vendor.ref({
-    nickname: "狮业有承凶姐",
-    office: "高级UI设计师",
-    company: "化州市狮业有承科技有限公司",
+    nickname: "欧文",
+    office: "前端开发工程师",
+    company: "GDOU有限公司",
     avatar: "https://resource.tuniaokj.com/images/xiongjie/x14.jpg",
     wechat: "tnkewo",
     wechatCode: "https://resource.tuniaokj.com/images/gitee_introduce_file/bottom.jpg"

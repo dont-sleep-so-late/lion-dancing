@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "业务流程",
+  "usingComponents": {
+    "tn-time-line": "../../node-modules/tnuiv3p-tn-time-line/time-line",
+    "tn-time-line-item": "../../node-modules/tnuiv3p-tn-time-line/time-line-item",
+    "tn-time-line-data": "../../node-modules/tnuiv3p-tn-time-line/time-line-data",
+    "consult-operation-bar": "../../components/consult-operation-bar/index"
+  }
+}

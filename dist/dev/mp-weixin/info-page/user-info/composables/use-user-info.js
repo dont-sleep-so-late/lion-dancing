@@ -3,7 +3,7 @@ const common_vendor = require("../../../common/vendor.js");
 const useUserInfo = () => {
   const userInfo = common_vendor.ref({
     uid: "1",
-    nickname: "不许凶我吖",
+    nickname: "你别睡这么晚",
     username: "",
     avatar: "https://resource.tuniaokj.com/images/avatar/xiong.jpg",
     phone: "18888888888",

@@ -3,10 +3,10 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("./common/vendor.js");
 if (!Math) {
   "./pages/index/index.js";
-  "./pages/index/sub-pages/page-c/index.js";
   "./home-page/search/index.js";
   "./home-page/brand-introduction/index.js";
   "./home-page/win-win/index.js";
+  "./home-page/service-center/index.js";
   "./home-page/topic-community/index.js";
   "./home-page/tuniao-ecology/index.js";
   "./home-page/company-culture/index.js";
@@ -34,7 +34,6 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         source: 'url("https://resource.tuniaokj.com/images/vue3-template/template2-website/font/tuniao-xiaowei.ttf")',
         fail: (err) => {
           common_vendor.debugWarn("load-font", `加载字体失败: ${err}`);
-          console.error(err);
         }
       });
     });

@@ -16,7 +16,8 @@
 <template>
   <!-- 顶部样机演示 -->
   <PageContainer>
-    <web-view src="https://human.kz88.us/"></web-view>
+    <!-- <web-view src="https://human.kz88.us/"></web-view> -->
+    <img src="/src/asset/数字人展示.png" alt="" style="width: 100%;">
   </PageContainer>
 
 </template>

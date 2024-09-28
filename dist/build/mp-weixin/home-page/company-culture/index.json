@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "公司文化",
+  "usingComponents": {
+    "tn-swiper": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper"
+  }
+}

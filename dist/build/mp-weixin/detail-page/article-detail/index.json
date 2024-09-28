@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "文章详情",
+  "usingComponents": {
+    "tn-avatar-group": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/avatar/src/avatar-group",
+    "tn-avatar": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/avatar/src/avatar",
+    "cool-title": "../../components/cool-title/index",
+    "title": "../../components/title/index",
+    "article-simple-item": "../../components/article-simple-item/index",
+    "consult-operation-bar": "../../components/consult-operation-bar/index"
+  }
+}

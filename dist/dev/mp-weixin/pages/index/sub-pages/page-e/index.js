@@ -60,77 +60,73 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
           (...args) => common_vendor.unref(loginHandle) && common_vendor.unref(loginHandle)(...args)
         )
       }, {
-        j: common_vendor.o(
-          //@ts-ignore
-          (...args) => common_vendor.unref(navMemberRightsPage) && common_vendor.unref(navMemberRightsPage)(...args)
-        ),
-        k: common_vendor.p({
+        j: common_vendor.p({
           name: "order"
         }),
-        l: common_vendor.o(
+        k: common_vendor.o(
           //@ts-ignore
           (...args) => common_vendor.unref(navOrderListPage) && common_vendor.unref(navOrderListPage)(...args)
         ),
-        m: common_vendor.p({
+        l: common_vendor.p({
           name: "vip"
         }),
-        n: common_vendor.o(
+        m: common_vendor.o(
           //@ts-ignore
           (...args) => common_vendor.unref(navMemberRightsPage) && common_vendor.unref(navMemberRightsPage)(...args)
         ),
-        o: common_vendor.p({
+        n: common_vendor.p({
           name: "identity"
         }),
-        p: common_vendor.o(
+        o: common_vendor.o(
           //@ts-ignore
           (...args) => common_vendor.unref(navUserInfoPage) && common_vendor.unref(navUserInfoPage)(...args)
         ),
-        q: common_vendor.p({
+        p: common_vendor.p({
           name: "help"
         }),
-        r: common_vendor.o(
+        q: common_vendor.o(
           //@ts-ignore
           (...args) => common_vendor.unref(navCommonProblemPage) && common_vendor.unref(navCommonProblemPage)(...args)
         ),
-        s: common_vendor.p({
+        r: common_vendor.p({
           name: "plane-fill"
         }),
-        t: common_vendor.p({
+        s: common_vendor.p({
           name: "right"
         }),
-        v: common_vendor.p({
+        t: common_vendor.p({
           name: "bookmark-fill"
         }),
-        w: common_vendor.p({
+        v: common_vendor.p({
           name: "right"
         }),
-        x: common_vendor.p({
+        w: common_vendor.p({
           name: "service-fill"
         }),
-        y: common_vendor.p({
+        x: common_vendor.p({
           name: "right"
         }),
-        z: common_vendor.p({
+        y: common_vendor.p({
           ["only-button"]: true,
           ["open-type"]: "contact"
         }),
-        A: common_vendor.p({
+        z: common_vendor.p({
           name: "tip-fill"
         }),
-        B: common_vendor.p({
+        A: common_vendor.p({
           name: "right"
         }),
-        C: common_vendor.p({
+        B: common_vendor.p({
           ["only-button"]: true,
           ["open-type"]: "feedback"
         }),
-        D: common_vendor.p({
+        C: common_vendor.p({
           name: "tel-circle-fill"
         }),
-        E: `${common_vendor.unref(navBarInfo).height + 12}px`,
-        F: common_vendor.p({
+        D: `${common_vendor.unref(navBarInfo).height + 12}px`,
+        E: common_vendor.p({
           fixed: false,
-          content: "狮业有承科技 提供技术支持"
+          content: "GDOU 提供技术支持"
         })
       });
     };

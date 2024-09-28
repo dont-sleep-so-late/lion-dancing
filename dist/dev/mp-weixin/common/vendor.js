@@ -7684,7 +7684,7 @@ const useComponentSafeAreaInsetBottomProp = buildProp({
 });
 const iconProps = buildProps({
   /**
-   * @description 图标名称，支持狮业有承内置图标和图片地址(只支持绝对路径)
+   * @description 图标名称，支持图鸟内置图标和图片地址(只支持绝对路径)
    */
   name: {
     type: iconPropType,
@@ -7699,7 +7699,7 @@ const iconProps = buildProps({
     default: ""
   },
   /**
-   * @description 图标颜色, 以tn开头则使用狮业有承内置的颜色
+   * @description 图标颜色, 以tn开头则使用图鸟内置的颜色
    */
   color: String,
   /**
@@ -8191,11 +8191,11 @@ const buttonProps = buildProps({
     type: [String, Number]
   },
   /**
-   * @description 背景颜色，以tn开头则使用狮业有承内置的颜色
+   * @description 背景颜色，以tn开头则使用图鸟内置的颜色
    */
   bgColor: String,
   /**
-   * @description 文字颜色，以tn开头则使用狮业有承内置的颜色
+   * @description 文字颜色，以tn开头则使用图鸟内置的颜色
    */
   textColor: String,
   /**
@@ -8207,7 +8207,7 @@ const buttonProps = buildProps({
    */
   plain: Boolean,
   /**
-   * @description 边框颜色，以tn开头则使用狮业有承内置的颜色
+   * @description 边框颜色，以tn开头则使用图鸟内置的颜色
    */
   borderColor: String,
   /**
@@ -8219,7 +8219,7 @@ const buttonProps = buildProps({
    */
   shadow: Boolean,
   /**
-   * @description 阴影颜色，以tn开头则使用狮业有承内置的颜色
+   * @description 阴影颜色，以tn开头则使用图鸟内置的颜色
    */
   shadowColor: String,
   /**
@@ -9108,11 +9108,11 @@ const searchBoxProps = buildProps({
    */
   size: useComponentSizeProp,
   /**
-   * @description 搜索框文字的颜色，以tn开头使用狮业有承的颜色
+   * @description 搜索框文字的颜色，以tn开头使用图鸟的颜色
    */
   textColor: String,
   /**
-   * @description 搜索框占位文字颜色，以tn开头使用狮业有承的颜色
+   * @description 搜索框占位文字颜色，以tn开头使用图鸟的颜色
    */
   placeholderColor: String,
   /**
@@ -9164,11 +9164,11 @@ const searchBoxProps = buildProps({
     default: "搜 索"
   },
   /**
-   * @description 搜索按钮字体颜色，以tn开头使用狮业有承的颜色
+   * @description 搜索按钮字体颜色，以tn开头使用图鸟的颜色
    */
   searchButtonTextColor: String,
   /**
-   * @description 搜索按钮背景颜色，以tn开头使用狮业有承的颜色
+   * @description 搜索按钮背景颜色，以tn开头使用图鸟的颜色
    */
   searchButtonBgColor: String,
   /**
@@ -9470,15 +9470,15 @@ const swiperProps = buildProps({
     default: "dot"
   },
   /**
-   * @description 指示器颜色，以tn开头使用狮业有承内置的颜色
+   * @description 指示器颜色，以tn开头使用图鸟内置的颜色
    */
   indicatorBgColor: String,
   /**
-   * @description 指示器激活时的颜色，以tn开头使用狮业有承内置的颜色
+   * @description 指示器激活时的颜色，以tn开头使用图鸟内置的颜色
    */
   indicatorActiveBgColor: String,
   /**
-   * @description 指示器文本颜色，以tn开头使用狮业有承内置的颜色
+   * @description 指示器文本颜色，以tn开头使用图鸟内置的颜色
    */
   indicatorTextColor: String
 });
@@ -10363,6 +10363,346 @@ const usePopupCustomStyle = (props) => {
     popupContentStyle
   };
 };
+const noticeBarScrollDirection = ["horizontal", "vertical"];
+const noticeBarProps = buildProps({
+  /**
+   * @description 是否显示通知栏
+   */
+  show: {
+    type: Boolean,
+    default: true
+  },
+  /**
+   * @description 通知栏显示的数据
+   */
+  data: {
+    type: definePropType(Array),
+    default: () => []
+  },
+  /**
+   * @description 背景颜色，以tn开头则使用图鸟内置的颜色
+   */
+  bgColor: String,
+  /**
+   * @description 文字颜色，以tn开头则使用图鸟内置的颜色
+   */
+  textColor: String,
+  /**
+   * @description 字体大小
+   */
+  fontSize: String,
+  /**
+   * @description 通知栏左边显示的图标
+   */
+  leftIcon: String,
+  /**
+   * @description 左图标颜色，以tn开头则使用图鸟内置的颜色
+   */
+  leftIconColor: String,
+  /**
+   * @description 左图标大小，默认单位rpx
+   */
+  leftIconSize: String,
+  /**
+   * @description 通知栏右边显示的图标
+   */
+  rightIcon: String,
+  /**
+   * @description 右图标颜色，以tn开头则使用图鸟内置的颜色
+   */
+  rightIconColor: String,
+  /**
+   * @description 右图标大小，默认单位rpx
+   */
+  rightIconSize: String,
+  /**
+   * @description 通知暂停播放
+   */
+  pause: Boolean,
+  /**
+   * @description 自动播放
+   */
+  autoPlay: {
+    type: Boolean,
+    default: true
+  },
+  /**
+   * @description 滚动方向
+   */
+  direction: {
+    type: String,
+    values: noticeBarScrollDirection,
+    default: "horizontal"
+  },
+  /**
+   * @description 是否采用衔接滚动，在 direction 为 horizontal 时有效
+   */
+  loop: {
+    type: Boolean,
+    default: true
+  },
+  /**
+   * @description 滚动速度，在 direction 为 horizontal 以及 loop 为 true 时表示 每秒滚动的像素数，在 direction 为 vertical 或者 direction 为 horizontal 且 loop 为 false 时表示 切换的时间间隔单位ms
+   */
+  speed: Number,
+  /**
+   * @description 在data为空时是否自动隐藏
+   */
+  autoHide: {
+    type: Boolean,
+    default: true
+  }
+});
+const noticeBarEmits = {
+  /**
+   * @description 点击通知栏
+   */
+  click: (index2) => isNumber(index2),
+  /**
+   * @description 左图标点击事件
+   */
+  "left-icon-click": () => true,
+  /**
+   * @description 右图标点击事件
+   */
+  "right-icon-click": () => true
+};
+const useNoticeBarCommonProps = (props) => {
+  const [bgColorClass, bgColorStyle] = useComponentColor(
+    toRef(props, "bgColor"),
+    "bg"
+  );
+  const [textColorClass, textColorStyle] = useComponentColor(
+    toRef(props, "textColor"),
+    "text"
+  );
+  const [leftIconColorClass, leftIconColorStyle] = useComponentColor(
+    toRef(props, "leftIconColor"),
+    "text"
+  );
+  const [rightIconColorClass, rightIconColorStyle] = useComponentColor(
+    toRef(props, "rightIconColor"),
+    "text"
+  );
+  const commonClass = computed(() => {
+    return (type = "normal") => {
+      const cls = [];
+      if (type === "normal") {
+        if (bgColorClass.value)
+          cls.push(bgColorClass.value);
+        if (textColorClass.value)
+          cls.push(textColorClass.value);
+      } else if (type === "leftIcon") {
+        if (leftIconColorClass.value)
+          cls.push(leftIconColorClass.value);
+      } else if (type === "rightIcon") {
+        if (rightIconColorClass.value)
+          cls.push(rightIconColorClass.value);
+      }
+      return cls.join(" ");
+    };
+  });
+  const commonStyle = computed(() => {
+    return (type = "normal") => {
+      const style = {};
+      if (type === "normal") {
+        if (!bgColorClass.value) {
+          style.backgroundColor = bgColorStyle.value || "var(--tn-color-white)";
+        }
+        if (textColorStyle.value) {
+          style.color = textColorStyle.value;
+        } else if (!bgColorClass.value && !textColorClass.value) {
+          style.color = "var(--tn-text-color-primary)";
+        }
+        if (props.fontSize)
+          style.fontSize = formatDomSizeValue(props.fontSize);
+      } else if (type === "leftIcon") {
+        if (!leftIconColorClass.value) {
+          style.color = leftIconColorStyle.value || "var(--tn-text-color-primary)";
+        }
+        if (props.fontSize)
+          style.fontSize = formatDomSizeValue(props.fontSize);
+        if (props.leftIconSize)
+          style.fontSize = formatDomSizeValue(props.leftIconSize);
+      } else if (type === "rightIcon") {
+        if (!rightIconColorClass.value) {
+          style.color = rightIconColorStyle.value || "var(--tn-text-color-secondary)";
+        }
+        if (props.fontSize)
+          style.fontSize = `calc(${formatDomSizeValue(props.fontSize)} * 1.2)`;
+        if (props.rightIconSize)
+          style.fontSize = formatDomSizeValue(props.rightIconSize);
+      }
+      return style;
+    };
+  });
+  return {
+    commonClass,
+    commonStyle
+  };
+};
+const useNoticeBar = (props, emits) => {
+  const showNoticeBar = computed(() => {
+    return props.show && !(props.autoHide && props.data.length === 0);
+  });
+  const play = computed(() => !props.pause);
+  const click = (index2) => {
+    emits("click", index2);
+  };
+  const leftIconClick = () => {
+    emits("left-icon-click");
+  };
+  const rightIconClick = () => {
+    emits("right-icon-click");
+  };
+  provide(
+    noticeBarKey,
+    reactive({
+      ...toRefs(props),
+      play,
+      click
+    })
+  );
+  return {
+    showNoticeBar,
+    leftIconClick,
+    rightIconClick
+  };
+};
+const useRowNoticeBar = () => {
+  const instance = getCurrentInstance();
+  const noticeBar = inject(noticeBarKey, null);
+  const { getSelectorNodeInfo } = useSelectorQuery(instance);
+  const componentId = `trnb-${generateId()}`;
+  const componentTextId = `${componentId}-text`;
+  const data = computed(() => {
+    var _a2;
+    if (!((_a2 = noticeBar == null ? void 0 : noticeBar.data) == null ? void 0 : _a2.length))
+      return "";
+    return noticeBar.data.join(" ");
+  });
+  const speed = computed(
+    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.speed, 80)
+  );
+  let animationDuration = 0;
+  let animation = null;
+  const animationData = ref(null);
+  let animationLoopTimer = null;
+  const createAnimation = () => {
+    animation = index.createAnimation({
+      duration: animationDuration,
+      timingFunction: "linear"
+    });
+    animation.translateX(
+      -(contentWidth + contentTextWidth) + Number(Math.random() * 10)
+    ).step({
+      duration: animationDuration
+    });
+    animation.translateX(0).step({
+      duration: 0
+    });
+    animationData.value = animation.export();
+  };
+  const createLoopAnimation = () => {
+    createAnimation();
+    animationLoopTimer = setInterval(() => {
+      createAnimation();
+    }, animationDuration + 80);
+  };
+  const stopAnimation = () => {
+    animation = null;
+    animationData.value = null;
+    if (animationLoopTimer) {
+      clearInterval(animationLoopTimer);
+      animationLoopTimer = null;
+    }
+  };
+  watch(
+    () => noticeBar == null ? void 0 : noticeBar.play,
+    (newVal) => {
+      if (newVal) {
+        createLoopAnimation();
+      } else {
+        stopAnimation();
+      }
+    }
+  );
+  let initCount = 0;
+  let contentWidth = 0;
+  let contentTextWidth = 0;
+  const getContentRectInfo = async () => {
+    try {
+      const contentRectInfo = await getSelectorNodeInfo(`#${componentId}`);
+      const contentTextRectInfo = await getSelectorNodeInfo(
+        `#${componentTextId}`
+      );
+      initCount = 0;
+      contentWidth = contentRectInfo.width || 0;
+      contentTextWidth = contentTextRectInfo.width || 0;
+      animationDuration = (contentWidth + contentTextWidth) / speed.value * 1e3;
+      if ((noticeBar == null ? void 0 : noticeBar.play) && (noticeBar == null ? void 0 : noticeBar.autoPlay)) {
+        setTimeout(() => {
+          createLoopAnimation();
+        }, 50);
+      }
+    } catch (err) {
+      if (initCount > 10) {
+        initCount = 0;
+        debugWarn("TnNoticeBar", `获取通知栏容器信息失败: ${err}`);
+        return;
+      }
+      initCount++;
+      setTimeout(() => {
+        getContentRectInfo();
+      }, 150);
+    }
+  };
+  watch(
+    () => noticeBar == null ? void 0 : noticeBar.speed,
+    () => {
+      stopAnimation();
+      getContentRectInfo();
+    }
+  );
+  const noticeClickEvent = () => {
+    noticeBar == null ? void 0 : noticeBar.click(0);
+  };
+  onMounted(() => {
+    nextTick$1(() => {
+      getContentRectInfo();
+    });
+  });
+  return {
+    componentId,
+    componentTextId,
+    data,
+    animationData,
+    noticeClickEvent
+  };
+};
+const useColumnNoticeBar = () => {
+  const noticeBar = inject(noticeBarKey, null);
+  const data = computed(
+    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.data, [])
+  );
+  const interval = computed(
+    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.speed, 3e3)
+  );
+  const play = computed(
+    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.play, true)
+  );
+  const vertical = computed(() => (noticeBar == null ? void 0 : noticeBar.direction) === "vertical");
+  const noticeClickEvent = (index2) => {
+    noticeBar == null ? void 0 : noticeBar.click(index2);
+  };
+  return {
+    data,
+    interval,
+    play,
+    vertical,
+    noticeClickEvent
+  };
+};
 const graphicCardProps = buildProps({
   /**
    * @description 头像地址
@@ -10393,11 +10733,11 @@ const graphicCardProps = buildProps({
     default: () => []
   },
   /**
-   * @description 标签背景颜色，以tn开头使用狮业有承内置的颜色
+   * @description 标签背景颜色，以tn开头使用图鸟内置的颜色
    */
   tagBgColor: String,
   /**
-   * @description 标签文字颜色，以tn开头使用狮业有承内置的颜色
+   * @description 标签文字颜色，以tn开头使用图鸟内置的颜色
    */
   tagTextColor: String,
   /**
@@ -10800,11 +11140,11 @@ const coolIconProps = buildProps({
    */
   name: String,
   /**
-   * @description 图标颜色，以tn开头使用狮业有承内置的颜色，如果是gradient开头则使用狮业有承内置的渐变色
+   * @description 图标颜色，以tn开头使用图鸟内置的颜色，如果是gradient开头则使用图鸟内置的渐变色
    */
   color: String,
   /**
-   * @description 背景颜色，以tn开头使用狮业有承内置的颜色
+   * @description 背景颜色，以tn开头使用图鸟内置的颜色
    */
   bgColor: String,
   /**
@@ -11356,14 +11696,14 @@ const suspendButtonProps = buildProps({
     default: "5%"
   },
   /**
-   * @description 按钮背景颜色, 以tn开头使用狮业有承内置的颜色
+   * @description 按钮背景颜色, 以tn开头使用图鸟内置的颜色
    */
   bgColor: {
     type: String,
     default: "tn-type-primary"
   },
   /**
-   * @description 按钮文字颜色, 以tn开头使用狮业有承内置的颜色
+   * @description 按钮文字颜色, 以tn开头使用图鸟内置的颜色
    */
   textColor: {
     type: String,
@@ -11518,7 +11858,7 @@ const pickerBaseProps = buildProps({
     default: "取 消"
   },
   /**
-   * @description 取消按钮的字体颜色，支持狮业有承内置的字体颜色
+   * @description 取消按钮的字体颜色，支持图鸟内置的字体颜色
    */
   cancelColor: String,
   /**
@@ -11536,7 +11876,7 @@ const pickerBaseProps = buildProps({
     default: "确 定"
   },
   /**
-   * @description 确定按钮的字体颜色，支持狮业有承内置的字体颜色
+   * @description 确定按钮的字体颜色，支持图鸟内置的字体颜色
    */
   confirmColor: String,
   /**
@@ -13034,14 +13374,14 @@ const updateUserInfoPopupProps = buildProps({
     default: "保 存"
   },
   /**
-   * @description 弹框按钮背景颜色，以tn开头使用狮业有承内置的颜色
+   * @description 弹框按钮背景颜色，以tn开头使用图鸟内置的颜色
    */
   confirmBgColor: {
     type: String,
     default: "tn-type-primary"
   },
   /**
-   * @description 弹框按钮文字颜色，以tn开头使用狮业有承内置的颜色
+   * @description 弹框按钮文字颜色，以tn开头使用图鸟内置的颜色
    */
   confirmTextColor: {
     type: String,
@@ -13142,11 +13482,11 @@ const useUpdateUserInfoPopup = (props, emits) => {
 };
 const tabsBaseProps = buildProps({
   /**
-   * @description 默认颜色，以tn开头时使用狮业有承内置的颜色
+   * @description 默认颜色，以tn开头时使用图鸟内置的颜色
    */
   color: String,
   /**
-   * @description 选中颜色，以tn开头时使用狮业有承内置的颜色
+   * @description 选中颜色，以tn开头时使用图鸟内置的颜色
    */
   activeColor: String,
   /**
@@ -13182,11 +13522,11 @@ const tabsProps = buildProps({
     default: "40rpx"
   },
   /**
-   * @description 背景颜色，以tn开头时使用狮业有承内置的颜色
+   * @description 背景颜色，以tn开头时使用图鸟内置的颜色
    */
   bgColor: String,
   /**
-   * @description bar滑块颜色，以tn开头时使用狮业有承内置的颜色
+   * @description bar滑块颜色，以tn开头时使用图鸟内置的颜色
    */
   barColor: String,
   /**
@@ -13665,7 +14005,7 @@ const loadingProps = buildProps({
     default: "primary"
   },
   /**
-   * @description 颜色，以tn开头则使用狮业有承内置的颜色
+   * @description 颜色，以tn开头则使用图鸟内置的颜色
    */
   color: String,
   /**
@@ -13761,11 +14101,11 @@ const badgeProps = buildProps({
     default: "primary"
   },
   /**
-   * @description 徽标背景颜色, 以tn开头则使用狮业有承内置的颜色
+   * @description 徽标背景颜色, 以tn开头则使用图鸟内置的颜色
    */
   bgColor: String,
   /**
-   * @description 徽标文字颜色, 以tn开头则使用狮业有承内置的颜色
+   * @description 徽标文字颜色, 以tn开头则使用图鸟内置的颜色
    */
   textColor: String,
   /**
@@ -13928,346 +14268,6 @@ const useBadgeCustomStyle = (props) => {
     badgeContentStyle
   };
 };
-const noticeBarScrollDirection = ["horizontal", "vertical"];
-const noticeBarProps = buildProps({
-  /**
-   * @description 是否显示通知栏
-   */
-  show: {
-    type: Boolean,
-    default: true
-  },
-  /**
-   * @description 通知栏显示的数据
-   */
-  data: {
-    type: definePropType(Array),
-    default: () => []
-  },
-  /**
-   * @description 背景颜色，以tn开头则使用狮业有承内置的颜色
-   */
-  bgColor: String,
-  /**
-   * @description 文字颜色，以tn开头则使用狮业有承内置的颜色
-   */
-  textColor: String,
-  /**
-   * @description 字体大小
-   */
-  fontSize: String,
-  /**
-   * @description 通知栏左边显示的图标
-   */
-  leftIcon: String,
-  /**
-   * @description 左图标颜色，以tn开头则使用狮业有承内置的颜色
-   */
-  leftIconColor: String,
-  /**
-   * @description 左图标大小，默认单位rpx
-   */
-  leftIconSize: String,
-  /**
-   * @description 通知栏右边显示的图标
-   */
-  rightIcon: String,
-  /**
-   * @description 右图标颜色，以tn开头则使用狮业有承内置的颜色
-   */
-  rightIconColor: String,
-  /**
-   * @description 右图标大小，默认单位rpx
-   */
-  rightIconSize: String,
-  /**
-   * @description 通知暂停播放
-   */
-  pause: Boolean,
-  /**
-   * @description 自动播放
-   */
-  autoPlay: {
-    type: Boolean,
-    default: true
-  },
-  /**
-   * @description 滚动方向
-   */
-  direction: {
-    type: String,
-    values: noticeBarScrollDirection,
-    default: "horizontal"
-  },
-  /**
-   * @description 是否采用衔接滚动，在 direction 为 horizontal 时有效
-   */
-  loop: {
-    type: Boolean,
-    default: true
-  },
-  /**
-   * @description 滚动速度，在 direction 为 horizontal 以及 loop 为 true 时表示 每秒滚动的像素数，在 direction 为 vertical 或者 direction 为 horizontal 且 loop 为 false 时表示 切换的时间间隔单位ms
-   */
-  speed: Number,
-  /**
-   * @description 在data为空时是否自动隐藏
-   */
-  autoHide: {
-    type: Boolean,
-    default: true
-  }
-});
-const noticeBarEmits = {
-  /**
-   * @description 点击通知栏
-   */
-  click: (index2) => isNumber(index2),
-  /**
-   * @description 左图标点击事件
-   */
-  "left-icon-click": () => true,
-  /**
-   * @description 右图标点击事件
-   */
-  "right-icon-click": () => true
-};
-const useNoticeBarCommonProps = (props) => {
-  const [bgColorClass, bgColorStyle] = useComponentColor(
-    toRef(props, "bgColor"),
-    "bg"
-  );
-  const [textColorClass, textColorStyle] = useComponentColor(
-    toRef(props, "textColor"),
-    "text"
-  );
-  const [leftIconColorClass, leftIconColorStyle] = useComponentColor(
-    toRef(props, "leftIconColor"),
-    "text"
-  );
-  const [rightIconColorClass, rightIconColorStyle] = useComponentColor(
-    toRef(props, "rightIconColor"),
-    "text"
-  );
-  const commonClass = computed(() => {
-    return (type = "normal") => {
-      const cls = [];
-      if (type === "normal") {
-        if (bgColorClass.value)
-          cls.push(bgColorClass.value);
-        if (textColorClass.value)
-          cls.push(textColorClass.value);
-      } else if (type === "leftIcon") {
-        if (leftIconColorClass.value)
-          cls.push(leftIconColorClass.value);
-      } else if (type === "rightIcon") {
-        if (rightIconColorClass.value)
-          cls.push(rightIconColorClass.value);
-      }
-      return cls.join(" ");
-    };
-  });
-  const commonStyle = computed(() => {
-    return (type = "normal") => {
-      const style = {};
-      if (type === "normal") {
-        if (!bgColorClass.value) {
-          style.backgroundColor = bgColorStyle.value || "var(--tn-color-white)";
-        }
-        if (textColorStyle.value) {
-          style.color = textColorStyle.value;
-        } else if (!bgColorClass.value && !textColorClass.value) {
-          style.color = "var(--tn-text-color-primary)";
-        }
-        if (props.fontSize)
-          style.fontSize = formatDomSizeValue(props.fontSize);
-      } else if (type === "leftIcon") {
-        if (!leftIconColorClass.value) {
-          style.color = leftIconColorStyle.value || "var(--tn-text-color-primary)";
-        }
-        if (props.fontSize)
-          style.fontSize = formatDomSizeValue(props.fontSize);
-        if (props.leftIconSize)
-          style.fontSize = formatDomSizeValue(props.leftIconSize);
-      } else if (type === "rightIcon") {
-        if (!rightIconColorClass.value) {
-          style.color = rightIconColorStyle.value || "var(--tn-text-color-secondary)";
-        }
-        if (props.fontSize)
-          style.fontSize = `calc(${formatDomSizeValue(props.fontSize)} * 1.2)`;
-        if (props.rightIconSize)
-          style.fontSize = formatDomSizeValue(props.rightIconSize);
-      }
-      return style;
-    };
-  });
-  return {
-    commonClass,
-    commonStyle
-  };
-};
-const useNoticeBar = (props, emits) => {
-  const showNoticeBar = computed(() => {
-    return props.show && !(props.autoHide && props.data.length === 0);
-  });
-  const play = computed(() => !props.pause);
-  const click = (index2) => {
-    emits("click", index2);
-  };
-  const leftIconClick = () => {
-    emits("left-icon-click");
-  };
-  const rightIconClick = () => {
-    emits("right-icon-click");
-  };
-  provide(
-    noticeBarKey,
-    reactive({
-      ...toRefs(props),
-      play,
-      click
-    })
-  );
-  return {
-    showNoticeBar,
-    leftIconClick,
-    rightIconClick
-  };
-};
-const useRowNoticeBar = () => {
-  const instance = getCurrentInstance();
-  const noticeBar = inject(noticeBarKey, null);
-  const { getSelectorNodeInfo } = useSelectorQuery(instance);
-  const componentId = `trnb-${generateId()}`;
-  const componentTextId = `${componentId}-text`;
-  const data = computed(() => {
-    var _a2;
-    if (!((_a2 = noticeBar == null ? void 0 : noticeBar.data) == null ? void 0 : _a2.length))
-      return "";
-    return noticeBar.data.join(" ");
-  });
-  const speed = computed(
-    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.speed, 80)
-  );
-  let animationDuration = 0;
-  let animation = null;
-  const animationData = ref(null);
-  let animationLoopTimer = null;
-  const createAnimation = () => {
-    animation = index.createAnimation({
-      duration: animationDuration,
-      timingFunction: "linear"
-    });
-    animation.translateX(
-      -(contentWidth + contentTextWidth) + Number(Math.random() * 10)
-    ).step({
-      duration: animationDuration
-    });
-    animation.translateX(0).step({
-      duration: 0
-    });
-    animationData.value = animation.export();
-  };
-  const createLoopAnimation = () => {
-    createAnimation();
-    animationLoopTimer = setInterval(() => {
-      createAnimation();
-    }, animationDuration + 80);
-  };
-  const stopAnimation = () => {
-    animation = null;
-    animationData.value = null;
-    if (animationLoopTimer) {
-      clearInterval(animationLoopTimer);
-      animationLoopTimer = null;
-    }
-  };
-  watch(
-    () => noticeBar == null ? void 0 : noticeBar.play,
-    (newVal) => {
-      if (newVal) {
-        createLoopAnimation();
-      } else {
-        stopAnimation();
-      }
-    }
-  );
-  let initCount = 0;
-  let contentWidth = 0;
-  let contentTextWidth = 0;
-  const getContentRectInfo = async () => {
-    try {
-      const contentRectInfo = await getSelectorNodeInfo(`#${componentId}`);
-      const contentTextRectInfo = await getSelectorNodeInfo(
-        `#${componentTextId}`
-      );
-      initCount = 0;
-      contentWidth = contentRectInfo.width || 0;
-      contentTextWidth = contentTextRectInfo.width || 0;
-      animationDuration = (contentWidth + contentTextWidth) / speed.value * 1e3;
-      if ((noticeBar == null ? void 0 : noticeBar.play) && (noticeBar == null ? void 0 : noticeBar.autoPlay)) {
-        setTimeout(() => {
-          createLoopAnimation();
-        }, 50);
-      }
-    } catch (err) {
-      if (initCount > 10) {
-        initCount = 0;
-        debugWarn("TnNoticeBar", `获取通知栏容器信息失败: ${err}`);
-        return;
-      }
-      initCount++;
-      setTimeout(() => {
-        getContentRectInfo();
-      }, 150);
-    }
-  };
-  watch(
-    () => noticeBar == null ? void 0 : noticeBar.speed,
-    () => {
-      stopAnimation();
-      getContentRectInfo();
-    }
-  );
-  const noticeClickEvent = () => {
-    noticeBar == null ? void 0 : noticeBar.click(0);
-  };
-  onMounted(() => {
-    nextTick$1(() => {
-      getContentRectInfo();
-    });
-  });
-  return {
-    componentId,
-    componentTextId,
-    data,
-    animationData,
-    noticeClickEvent
-  };
-};
-const useColumnNoticeBar = () => {
-  const noticeBar = inject(noticeBarKey, null);
-  const data = computed(
-    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.data, [])
-  );
-  const interval = computed(
-    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.speed, 3e3)
-  );
-  const play = computed(
-    () => isEmptyVariableInDefault(noticeBar == null ? void 0 : noticeBar.play, true)
-  );
-  const vertical = computed(() => (noticeBar == null ? void 0 : noticeBar.direction) === "vertical");
-  const noticeClickEvent = (index2) => {
-    noticeBar == null ? void 0 : noticeBar.click(index2);
-  };
-  return {
-    data,
-    interval,
-    play,
-    vertical,
-    noticeClickEvent
-  };
-};
 const footerFixedMode = ["page", "container"];
 const footerProps = buildProps({
   /**
@@ -14282,7 +14282,7 @@ const footerProps = buildProps({
     default: () => []
   },
   /**
-   * @description 内容字体颜色，以tn开头使用狮业有承内置的颜色
+   * @description 内容字体颜色，以tn开头使用图鸟内置的颜色
    */
   textColor: String,
   /**
@@ -14290,7 +14290,7 @@ const footerProps = buildProps({
    */
   size: String,
   /**
-   * @description 导航信息字体颜色，以tn开头使用狮业有承内置的颜色
+   * @description 导航信息字体颜色，以tn开头使用图鸟内置的颜色
    */
   navigatorTextColor: String,
   /**
@@ -14429,6 +14429,137 @@ const useFooter = (props, emits) => {
     navigatorClickEvent
   };
 };
+const titleModes = [
+  "normal",
+  "vLine",
+  "dot",
+  "hLine",
+  "subTitle",
+  "transparent"
+];
+const titleAlign = ["left", "center", "right"];
+const titleProps = buildProps({
+  /**
+   * @description 标题内容
+   */
+  title: String,
+  /**
+   * @description 子标题内容，设置 mode 为 subTitle 时生效
+   */
+  subTitle: String,
+  /**
+   * @description 标题模式
+   */
+  mode: {
+    type: String,
+    values: titleModes,
+    default: "normal"
+  },
+  /**
+   * @description 标题大小，内置`sm`、`lg`、`xl`，同时也可以传递指定的尺寸
+   */
+  size: String,
+  /**
+   * @description 标题对齐方式
+   */
+  align: {
+    type: String,
+    values: titleAlign,
+    default: "left"
+  },
+  /**
+   * @description 标题颜色，以tn开头则使用图鸟内置的颜色
+   */
+  color: String,
+  /**
+   * @description 辅助元素颜色，以tn开头则使用图鸟内置的颜色
+   */
+  assistColor: String
+});
+const titleEmits = {
+  /**
+   * @description 点击事件
+   */
+  click: () => true
+};
+const useTitleCustomStyle = (props) => {
+  const ns = useNamespace("title");
+  const [titleTextColorClass, titleTextColorStyle] = useComponentColor(
+    toRef(props, "color"),
+    "text"
+  );
+  const [titleBgColorClass, titleBgColorStyle] = useComponentColor(
+    toRef(props, "color"),
+    "bg"
+  );
+  const [assistTextColorClass, assistTextColorStyle] = useComponentColor(
+    toRef(props, "assistColor"),
+    "text"
+  );
+  const [assistBgColorClass, assistBgColorStyle] = useComponentColor(
+    toRef(props, "assistColor"),
+    "bg"
+  );
+  const { sizeType } = useComponentSize(props.size);
+  const titleClass = computed(() => {
+    const cls = [ns.e("title"), ns.em("title", props.mode)];
+    if (props.mode === "transparent") {
+      cls.push("tn-text-transparent");
+      if (titleBgColorClass.value)
+        cls.push(titleBgColorClass.value);
+    } else {
+      if (titleTextColorClass.value)
+        cls.push(titleTextColorClass.value);
+    }
+    if (props.size && sizeType.value === "inner")
+      cls.push(ns.em("title", props.size));
+    return cls.join(" ");
+  });
+  const titleStyle = computed(() => {
+    const style = {};
+    if (props.mode === "transparent") {
+      if (!titleBgColorClass.value)
+        style.backgroundColor = titleBgColorStyle.value || "var(--tn-color-primary)";
+    } else {
+      if (!titleTextColorClass.value)
+        style.color = titleTextColorStyle.value || "var(--tn-text-color-primary)";
+    }
+    if (props.size && sizeType.value === "custom")
+      style.fontSize = formatDomSizeValue(props.size);
+    if (props.align)
+      style.textAlign = props.align;
+    return style;
+  });
+  const assistColorClass = computed(() => {
+    const cls = [];
+    if (props.mode === "subTitle") {
+      if (assistTextColorClass.value)
+        cls.push(assistTextColorClass.value);
+    } else {
+      if (assistBgColorClass.value)
+        cls.push(assistBgColorClass.value);
+    }
+    return cls.join(" ");
+  });
+  const assistColorStyle = computed(() => {
+    const style = {};
+    if (props.mode === "subTitle") {
+      if (!assistTextColorClass.value)
+        style.color = assistTextColorStyle.value || "var(--tn-color-primary-light-7)";
+    } else {
+      if (!assistBgColorClass.value)
+        style.backgroundColor = assistBgColorStyle.value || "var(--tn-color-primary)";
+    }
+    return style;
+  });
+  return {
+    ns,
+    titleClass,
+    titleStyle,
+    assistColorClass,
+    assistColorStyle
+  };
+};
 const photoAlbumProps = buildProps({
   /**
    * @description 图片地址列表
@@ -14541,7 +14672,7 @@ const emptyProps = buildProps({
     required: true
   },
   /**
-   * @description 内容颜色，以tn开头使用狮业有承内置的颜色
+   * @description 内容颜色，以tn开头使用图鸟内置的颜色
    */
   color: String,
   /**
@@ -14686,6 +14817,8 @@ exports.timeLineItemEmits = timeLineItemEmits;
 exports.timeLineItemProps = timeLineItemProps;
 exports.timeLineKey = timeLineKey;
 exports.timeLineProps = timeLineProps;
+exports.titleEmits = titleEmits;
+exports.titleProps = titleProps;
 exports.tnNavPage = tnNavPage;
 exports.toRef = toRef;
 exports.unref = unref;
@@ -14744,6 +14877,7 @@ exports.useTabsItem = useTabsItem;
 exports.useTabsItemCustomStyle = useTabsItemCustomStyle;
 exports.useTimeLineCustomStyle = useTimeLineCustomStyle;
 exports.useTimeLineDataCustomStyle = useTimeLineDataCustomStyle;
+exports.useTitleCustomStyle = useTitleCustomStyle;
 exports.useUniAppSystemRectInfo = useUniAppSystemRectInfo;
 exports.useUpdateUserInfoPopup = useUpdateUserInfoPopup;
 exports.useUpdateUserInfoPopupCustomStyle = useUpdateUserInfoPopupCustomStyle;

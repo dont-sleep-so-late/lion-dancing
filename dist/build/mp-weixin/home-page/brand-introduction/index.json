@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "品牌介绍",
+  "usingComponents": {
+    "tn-swiper": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/swiper/src/swiper",
+    "tn-avatar": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/avatar/src/avatar",
+    "tn-popup": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/popup/src/popup"
+  }
+}

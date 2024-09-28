@@ -1,38 +1,47 @@
-/* 导航栏 start */
-.navbar.data-v-33e1c801 {
+/* 轮播 start */
+.swiper.data-v-33e1c801 {
   position: relative;
   width: 100%;
-  padding: 0rpx 30rpx;
-  display: flex;
+  height: 520rpx;
 }
-.navbar .search-operation.data-v-33e1c801 {
-  flex-grow: 0;
-  flex-shrink: 0;
-  font-size: 40rpx;
+.swiper .swiper-item.data-v-33e1c801 {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.navbar .category.data-v-33e1c801 {
-  flex: 1;
-  margin-left: 20rpx;
-  padding-top: 4rpx;
+.swiper .swiper-item .image.data-v-33e1c801 {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-/* 导航栏 end */
-/* 页面 start */
+.swiper .swiper-item .title.data-v-33e1c801 {
+  position: absolute;
+  left: 30rpx;
+  bottom: 200rpx;
+  font-weight: bold;
+  padding: 4rpx 8rpx;
+  border-radius: 6rpx;
+  background: rgb(255, 255, 255);
+  color: #070707;
+  mix-blend-mode: lighten;
+}
+.swiper .swiper-item .desc.data-v-33e1c801 {
+  position: absolute;
+  left: 30rpx;
+  bottom: 140rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+}
+/* 轮播 end */
+/* 页面内容 start */
 .page.data-v-33e1c801 {
   position: relative;
   width: 100%;
-  height: 100vh;
+  padding: 0rpx 30rpx;
+  margin-top: -100rpx;
 }
-.page .page-container.data-v-33e1c801 {
-  position: relative;
-  height: 100%;
+.page .news-item + .news-item.data-v-33e1c801 {
+  margin-top: 30rpx;
 }
-.page .page-container .page-scroll.data-v-33e1c801 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.page .page-container .page-scroll.active.data-v-33e1c801 {
-  display: block;
-}
-/* 页面 end */
+/* 页面内容 end */

@@ -1,0 +1,1 @@
+<view class="{{['page-container', 'data-v-b58bb5b5', a]}}"><slot/></view>

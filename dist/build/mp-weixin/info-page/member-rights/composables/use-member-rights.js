@@ -1,0 +1,1 @@
+"use strict";const e=require("../../../common/vendor.js");exports.useMemberRights=()=>({tuniaoProjects:e.ref([{name:"狮业有承UI",isVIP:!1},{name:"狮业有承vue3",isVIP:!1},{name:"圈子博客",isVIP:!1},{name:"简约商圈",isVIP:!1},{name:"凶姐壁纸",isVIP:!1},{name:"名片资讯",isVIP:!0},{name:"炫酷官网",isVIP:!0}])});

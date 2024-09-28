@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "公司相册",
+  "usingComponents": {
+    "tn-water-fall": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/water-fall/src/water-fall",
+    "tn-lazy-load": "../../node-modules/@tuniao/tnui-vue3-uniapp/components/lazy-load/src/lazy-load"
+  }
+}

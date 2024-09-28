@@ -1,0 +1,1 @@
+"use strict";const e=require("../../../../common/vendor.js"),o=require("../../../../common/assets.js");Math||n();const n=()=>"../../components/page-container/index.js",t=e.defineComponent({options:{virtualHost:!0},__name:"index",setup:e=>(e,n)=>({a:o._imports_0})}),s=e._export_sfc(t,[["__scopeId","data-v-8ff0695e"]]);wx.createComponent(s);

@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js");if(!Array){e.resolveComponent("TnNavbar")()}Math||o();const o=()=>"../../components/video/video.js",n=e.defineComponent({__name:"index",setup:o=>(o,n)=>({a:e.p({fixed:!0,"bg-color":"transparent","bottom-shadow":!1,placeholder:!1})})}),t=e._export_sfc(n,[["__scopeId","data-v-26e0859a"]]);wx.createPage(t);

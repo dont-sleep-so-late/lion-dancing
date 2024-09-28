@@ -9,9 +9,9 @@ const useIndex = () => {
       activeIcon: "home-in-fill"
     },
     {
-      text: "产品",
-      icon: "iot",
-      activeIcon: "iot-fill"
+      text: "资讯",
+      icon: "topics",
+      activeIcon: "topics-fill"
     },
     {
       text: "AI数字人导游",
@@ -19,9 +19,9 @@ const useIndex = () => {
       activeIcon: "emoji-good-fill"
     },
     {
-      text: "资讯",
-      icon: "topics",
-      activeIcon: "topics-fill"
+      text: "装备专区",
+      icon: "iot",
+      activeIcon: "iot-fill"
     },
     {
       text: "狮业有承",

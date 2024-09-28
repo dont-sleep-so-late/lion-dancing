@@ -1,0 +1,1 @@
+"use strict";const o=require("../../../../common/vendor.js"),e=o.defineComponent({options:{virtualHost:!0},__name:"index",props:{placeholderBottom:{type:Boolean,default:!0}},setup:e=>(t,n)=>({a:o.n({"placeholder-bottom":e.placeholderBottom})})}),t=o._export_sfc(e,[["__scopeId","data-v-18d77754"]]);wx.createComponent(t);

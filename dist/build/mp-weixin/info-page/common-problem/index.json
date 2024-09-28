@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "常见问题",
+  "usingComponents": {
+    "tn-suspend-button": "../../node-modules/tnuiv3p-tn-suspend-button/index"
+  }
+}

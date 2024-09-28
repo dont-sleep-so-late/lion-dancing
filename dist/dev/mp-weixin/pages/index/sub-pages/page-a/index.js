@@ -112,50 +112,52 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         o: `url(${common_vendor.unref(hotCaseData)[0]})`,
         p: `url(${common_vendor.unref(hotCaseData)[1]})`,
         q: `url(${common_vendor.unref(hotCaseData)[2]})`,
-        r: common_vendor.p({
+        r: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("../sub-pages/page-b/index")),
+        s: common_vendor.p({
           title: "关于我们"
         }),
-        s: common_vendor.p({
+        t: common_vendor.p({
           name: "right"
         }),
-        t: common_vendor.p({
+        v: common_vendor.p({
           name: "image-text-fill"
         }),
-        v: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/company-culture/index")),
-        w: common_vendor.p({
+        w: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/company-culture/index")),
+        x: common_vendor.p({
           name: "right"
         }),
-        x: common_vendor.p({
+        y: common_vendor.p({
           name: "calendar-fill"
         }),
-        y: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/development-path/index")),
-        z: common_vendor.p({
+        z: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/development-path/index")),
+        A: common_vendor.p({
           name: "right"
         }),
-        A: common_vendor.p({
+        B: common_vendor.p({
           name: "image-fill"
         }),
-        B: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/company-album/index")),
-        C: common_vendor.p({
-          name: "right"
-        }),
+        C: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/company-album/index")),
         D: common_vendor.p({
-          name: "theme-fill"
+          name: "right"
         }),
         E: common_vendor.p({
+          name: "theme-fill"
+        }),
+        F: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/win-win/index")),
+        G: common_vendor.p({
           name: "right"
         }),
-        F: common_vendor.p({
+        H: common_vendor.p({
           name: "trophy-fill"
         }),
-        G: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/honor-cert/index")),
-        H: common_vendor.p({
+        I: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/honor-cert/index")),
+        J: common_vendor.p({
           name: "right"
         }),
-        I: common_vendor.p({
+        K: common_vendor.p({
           name: "location-fill"
         }),
-        J: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/company-location/index"))
+        L: common_vendor.o(($event) => common_vendor.unref(tnNavPage)("/home-page/company-location/index"))
       };
     };
   }

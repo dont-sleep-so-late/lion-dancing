@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js"),r={set(r,t){e.index.setStorageSync(r,t)},get(r){try{const t=e.index.getStorageSync(r);if(!t)return;return t}catch(t){return void console.error("获取数据缓存失败",t)}},remove(r){e.index.removeStorageSync(r)},clear(){e.index.clearStorageSync()}};exports.storage=r;

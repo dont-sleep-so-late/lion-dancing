@@ -14,9 +14,9 @@ const useSubPage = () => {
       common_vendor.index.hideLoading();
       userInfo.value = {
         uid: utils_localMock.generateRandomNumber(1e5, 999999).toString(),
-        nickname: "不许凶我吖",
+        nickname: "你别睡这么晚",
         username: "",
-        avatar: "https://resource.tuniaokj.com/images/avatar/xiong.jpg",
+        avatar: "https://cdn.jsdelivr.net/gh/dont-sleep-so-late/CDN/lionDancing/shuzhibaijian%20(3).jpg",
         sex: 0,
         phone: "",
         desc: "",

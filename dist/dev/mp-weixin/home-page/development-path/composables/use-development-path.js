@@ -9,10 +9,10 @@ const useDevelopmentPath = () => {
       data: [
         {
           id: "11",
-          title: "推出狮业有承UI",
-          desc: "狮业有承UI是一套基于Vue3.0的UI组件库，它是一个面向未来的组件库，它的目标是为了提升开发者的开发效率，让开发者更专注于业务。",
+          title: "推出狮业有承",
+          desc: "狮业有承是一套狮业有成，一个基于虚拟数字人传播醒狮操、相关新闻展示、志愿者招募、醒狮招聘、商业合作以及周边售卖的小程序。它的目标是为了让更多人了解认识到。",
           image: "https://resource.tuniaokj.com/images/bless/bless-tiger.png",
-          tags: ["狮业有承UI", "Vue3.0", "组件库"]
+          tags: ["小程序", "Vue3.0", "数字人"]
         },
         {
           id: "12",
